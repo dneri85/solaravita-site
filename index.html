@@ -212,10 +212,35 @@ p{margin:0 0 1em}
 
 .footer a:hover{color:var(--leaf);text-decoration:underline}
 .footer .tagline strong{color:var(--leaf)}
+.book .price-link-wrap{margin:1em 0 0}
+.book .price-link{color:var(--white);font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.book .price-link:hover{color:var(--leaf)}
+.nav a[aria-current="page"]{color:var(--green);text-decoration:underline;text-underline-offset:6px}
 .footer .legal{border-top:1px solid rgba(255,255,255,.25);margin-top:36px;padding-top:20px;font-size:.8rem;color:rgba(255,255,255,.75)}
 .footer .legal p{color:rgba(255,255,255,.75);margin:.4em 0}
 
 /* Responsive */
+@media (max-width:1180px){
+  .menu-btn{display:inline-flex;align-items:center}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--warm);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:4px;padding:14px 20px 22px;box-shadow:0 14px 24px rgba(8,47,87,.12)}
+  .nav.open{display:flex}
+  .nav a{padding:12px 6px;font-size:1.05rem}
+  .nav .btn{margin-top:8px}
+}
+.nav a{white-space:nowrap}
+@media (max-width:1180px){
+  .menu-btn{display:inline-flex;align-items:center}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--warm);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:4px;padding:14px 20px 22px;box-shadow:0 14px 24px rgba(8,47,87,.12)}
+  .nav.open{display:flex}
+  .nav a{padding:12px 6px;font-size:1.05rem}
+  .nav .btn{margin-top:8px}
+}
+.nav a{white-space:nowrap}
+html[data-size="lg"] .menu-btn,html[data-size="xl"] .menu-btn{display:inline-flex;align-items:center}
+html[data-size="lg"] .nav,html[data-size="xl"] .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--warm);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:4px;padding:14px 20px 22px;box-shadow:0 14px 24px rgba(8,47,87,.12)}
+html[data-size="lg"] .nav.open,html[data-size="xl"] .nav.open{display:flex}
+html[data-size="lg"] .nav a,html[data-size="xl"] .nav a{padding:12px 6px;font-size:1.05rem}
+html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
 @media (max-width:900px){
   .menu-btn{display:inline-flex;align-items:center}
   .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--warm);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:4px;padding:14px 20px 22px;box-shadow:0 14px 24px rgba(8,47,87,.12)}
@@ -368,6 +393,7 @@ p{margin:0 0 1em}
       <a href="#help"><span data-i18n="nav-help">How we help</span></a>
       <a href="#events"><span data-i18n="nav-events">Events</span></a>
       <a href="#about"><span data-i18n="nav-about">About</span></a>
+      <a href="/pricing/"><span data-i18n="nav-pricing">Pricing</span></a>
       <a href="#faq"><span data-i18n="nav-faq">Questions</span></a>
       <a class="btn btn-gold" href="#contact"><span data-i18n="nav-cta"><span data-i18n="ct-eyebrow">Get free help</span></span></a>
     </nav>
@@ -571,6 +597,7 @@ p{margin:0 0 1em}
     <details><summary><span data-i18n="q3">Can you help in person, or only online?</span></summary><p><span data-i18n="a3">Both. We can meet online, or in person at your home or a community center when available in South Florida.</span></p></details>
     <details><summary><span data-i18n="q4">Can I book help for my mother, father, or someone I care for?</span></summary><p><span data-i18n="a4">Yes. Many families reach out for a loved one. We can work with them directly, or with both of you together.</span></p></details>
     <details><summary><span data-i18n="q5">Should I bring my own phone or computer?</span></summary><p><span data-i18n="a5">If you can, yes. Practicing on your own device helps new skills stick. If not, we'll still help.</span></p></details>
+    <details><summary><span data-i18n="q6">How much does help cost?</span></summary><p><span data-i18n="a6">The first conversation is free. After that, one-on-one sessions are $55 online or $75 in your home, each up to an hour. <a href="/pricing/">See all prices</a>.</span></p></details>
   </div>
 </section>
 
@@ -583,6 +610,7 @@ p{margin:0 0 1em}
         <h2><span data-i18n="ct-h2">Start with a free conversation</span></h2>
         <p><span data-i18n="ct-p">Pick a time that works for you. We'll talk about what you'd like to do and how we can help. No pressure, and no question is too small.</span></p>
         <a class="btn btn-gold" href="https://calendly.com/solaravita/get-support" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="book">Book a free conversation</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
+        <p class="price-link-wrap"><a class="price-link" href="/pricing/"><span data-i18n="price-link">See our simple, upfront prices</span></a></p>
       </div>
       <div class="book-topics">
         <h3 id="topics-label"><span data-i18n="topics">Or choose a topic</span></h3>
@@ -628,6 +656,7 @@ p{margin:0 0 1em}
         <a href="#services"><span data-i18n="svc-eyebrow"><span data-i18n="nav-services">What we help with</span></span></a>
         <a href="#events"><span data-i18n="nav-events">Events</span></a>
         <a href="#about"><span data-i18n="nav-about">About</span></a>
+        <a href="/pricing/"><span data-i18n="nav-pricing">Pricing</span></a>
         <a href="#faq"><span data-i18n="nav-faq">Questions</span></a>
       </nav>
       <div>
@@ -778,7 +807,11 @@ var SV_I18N = {
 "aria-brand": "Solara Vita, back to top",
 "aria-main": "Main",
 "aria-footer": "Footer",
-"langnote": ""
+"langnote": "",
+"nav-pricing": "Pricing",
+"price-link": "See our simple, upfront prices",
+"q6": "How much does help cost?",
+"a6": "The first conversation is free. After that, one-on-one sessions are $55 online or $75 in your home, each up to an hour. <a href=\"/pricing/\">See all prices</a>."
 },
 "es": {
 "lang-label": "Idioma",
@@ -911,7 +944,11 @@ var SV_I18N = {
 "aria-brand": "Solara Vita, volver arriba",
 "aria-main": "Principal",
 "aria-footer": "Pie de página",
-"langnote": "Las páginas para reservar una cita están en inglés. Si necesita ayuda para reservar, llame o envíe un mensaje al (954) 687-0675."
+"langnote": "Las páginas para reservar una cita están en inglés. Si necesita ayuda para reservar, llame o envíe un mensaje al (954) 687-0675.",
+"nav-pricing": "Precios",
+"price-link": "Vea nuestros precios simples y claros",
+"q6": "¿Cuánto cuesta la ayuda?",
+"a6": "La primera conversación es gratis. Después, las sesiones personalizadas cuestan $55 en línea o $75 en su casa, de hasta una hora cada una. <a href=\"/pricing/\">Vea todos los precios</a>."
 },
 "pt": {
 "lang-label": "Idioma",
@@ -1044,7 +1081,11 @@ var SV_I18N = {
 "aria-brand": "Solara Vita, voltar ao topo",
 "aria-main": "Principal",
 "aria-footer": "Rodapé",
-"langnote": "As páginas de agendamento estão em inglês. Se precisar de ajuda para agendar, ligue ou mande mensagem para (954) 687-0675."
+"langnote": "As páginas de agendamento estão em inglês. Se precisar de ajuda para agendar, ligue ou mande mensagem para (954) 687-0675.",
+"nav-pricing": "Preços",
+"price-link": "Veja nossos preços simples e claros",
+"q6": "Quanto custa a ajuda?",
+"a6": "A primeira conversa é grátis. Depois, as sessões individuais custam $55 online ou $75 na sua casa, com até uma hora cada. <a href=\"/pricing/\">Veja todos os preços</a>."
 }
 };
 var SV_LANG = 'en';
