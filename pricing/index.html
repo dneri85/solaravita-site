@@ -355,6 +355,7 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
 .expect li:before{content:counter(x);position:absolute;left:0;top:0;display:grid;place-items:center;width:1.9em;height:1.9em;border-radius:50%;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem}
 .expect h3{font-size:1rem;margin:0 0 .2em}
 .expect p{margin:0;font-size:.9rem;line-height:1.45;color:var(--muted)}
+.expect .quick{margin:1.1em 0 0;padding-top:1em;border-top:1px solid var(--line);font-size:.95rem;color:var(--navy)}
 @media (max-width:1000px){.expect ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
 html[data-size="lg"] .expect ol,html[data-size="xl"] .expect ol{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:640px){.expect{padding:22px 20px}.expect ol,html[data-size="lg"] .expect ol,html[data-size="xl"] .expect ol{grid-template-columns:minmax(0,1fr)}}
@@ -488,6 +489,7 @@ html[data-size="lg"] .expect ol,html[data-size="xl"] .expect ol{grid-template-co
         <li><h3 data-i18n="exp3-h">You review and approve</h3><p data-i18n="exp3-p">Ask questions or request changes. We begin only after you say yes.</p></li>
         <li><h3 data-i18n="exp4-h">Your sessions begin</h3><p data-i18n="exp4-p">Practice on your own device, at your own pace, with written steps to keep.</p></li>
       </ol>
+      <p class="quick" data-i18n="exp-quick">Need just one quick fix, like connecting a printer? You can skip the plan and book a single session.</p>
     </div>
   </div>
 </section>
@@ -708,7 +710,8 @@ var SV_I18N = {
 "exp3-h": "You review and approve",
 "exp3-p": "Ask questions or request changes. We begin only after you say yes.",
 "exp4-h": "Your sessions begin",
-"exp4-p": "Practice on your own device, at your own pace, with written steps to keep."
+"exp4-p": "Practice on your own device, at your own pace, with written steps to keep.",
+"exp-quick": "Need just one quick fix, like connecting a printer? You can skip the plan and book a single session."
 },
 "es": {
 "lang-label": "Idioma",
@@ -876,7 +879,8 @@ var SV_I18N = {
 "exp3-h": "Usted revisa y aprueba",
 "exp3-p": "Haga preguntas o pida cambios. Empezamos solo cuando usted diga que sí.",
 "exp4-h": "Empiezan sus sesiones",
-"exp4-p": "Practique con su propio aparato, a su ritmo, con pasos por escrito para guardar."
+"exp4-p": "Practique con su propio aparato, a su ritmo, con pasos por escrito para guardar.",
+"exp-quick": "¿Solo necesita un arreglo rápido, como conectar una impresora? Puede omitir el plan y reservar una sola sesión."
 },
 "pt": {
 "lang-label": "Idioma",
@@ -1044,7 +1048,8 @@ var SV_I18N = {
 "exp3-h": "Você revisa e aprova",
 "exp3-p": "Tire dúvidas ou peça mudanças. Só começamos depois que você disser sim.",
 "exp4-h": "Suas sessões começam",
-"exp4-p": "Pratique no seu próprio aparelho, no seu ritmo, com passos por escrito para guardar."
+"exp4-p": "Pratique no seu próprio aparelho, no seu ritmo, com passos por escrito para guardar.",
+"exp-quick": "Precisa só de um ajuste rápido, como conectar uma impressora? Você pode pular o plano e agendar uma única sessão."
 }
 };
 var SV_LANG = 'en';
