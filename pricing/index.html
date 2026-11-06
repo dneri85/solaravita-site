@@ -359,6 +359,32 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
 @media (max-width:1000px){.expect ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
 html[data-size="lg"] .expect ol,html[data-size="xl"] .expect ol{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:640px){.expect{padding:22px 20px}.expect ol,html[data-size="lg"] .expect ol,html[data-size="xl"] .expect ol{grid-template-columns:minmax(0,1fr)}}
+
+.price-cards.singles{grid-template-columns:repeat(3,minmax(0,1fr))}
+.packages{margin-top:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px;align-items:center}
+.pk-intro h2{font-size:1.4rem;margin:0 0 .4em}
+.pk-intro p{color:var(--muted);margin:0}
+.price-cards.pk-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tag.save{background:#DDF3E6;color:var(--green)}
+.included{margin-top:40px;background:var(--white);border:1px solid var(--line);border-left:6px solid var(--green);border-radius:var(--radius);padding:28px 32px}
+.included h2{font-size:1.3rem;margin:0 0 .8em}
+.included ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 32px}
+.included li{display:flex;gap:.6em;align-items:flex-start;color:var(--navy)}
+.included .icon{color:var(--green);width:1.25em;height:1.25em;margin-top:.2em}
+.gk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.gk-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+.gk-card h3{font-size:1.2rem;margin:0 0 .5em}
+.gk-card p{color:var(--muted);margin:0 0 .8em}
+.gk-card p:last-child{margin-bottom:0}
+.gk-card .safe{display:flex;gap:.6em;align-items:flex-start;background:var(--softgold);color:var(--navy);font-weight:700;border-radius:12px;padding:.8em 1em}
+.gk-card .safe .icon{color:var(--green);width:1.3em;height:1.3em;margin-top:.15em}
+.gk-card .price-list{margin:.4em 0 1em}
+.gk-card .note{font-size:.9rem}
+@media (max-width:1000px){.packages{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.price-cards.singles{grid-template-columns:minmax(0,1fr)}.gk-grid,.included ul{grid-template-columns:minmax(0,1fr)}}
+html[data-size="xl"] .price-cards.singles{grid-template-columns:minmax(0,1fr)}
+html[data-size="lg"] .included ul,html[data-size="xl"] .included ul,html[data-size="xl"] .gk-grid{grid-template-columns:minmax(0,1fr)}
+@media (max-width:640px){.price-cards.pk-cards{grid-template-columns:minmax(0,1fr)}.included,.gk-card{padding:22px 20px}}
 </style>
 </head>
 <body>
@@ -454,7 +480,7 @@ html[data-size="lg"] .expect ol,html[data-size="xl"] .expect ol{grid-template-co
       <h2 data-i18n="pr-ind-h2">Support for older adults and families</h2>
       <p class="lead" data-i18n="pr-ind-lead">Patient, one-on-one help with everyday technology, digital healthcare tools, and online safety.</p>
     </div>
-    <ul class="price-cards">
+    <ul class="price-cards singles">
       <li class="price-card">
         <h3 data-i18n="pc1-h">Free consultation</h3>
         <p class="dur" data-i18n="up30">Up to 30 minutes</p>
@@ -473,13 +499,38 @@ html[data-size="lg"] .expect ol,html[data-size="xl"] .expect ol{grid-template-co
         <p class="amount">$75</p>
         <p class="desc" data-i18n="pc3-p">We come to you and work on the devices you already use.</p>
       </li>
-      <li class="price-card featured">
-        <div class="tags"><span class="tag" data-i18n="pc4-tag">Package</span></div><h3 data-i18n="pc4-h">Three-session learning package</h3>
-        <p class="dur" data-i18n="pc4-dur">Three sessions</p>
-        <p class="amount">$195</p>
-        <p class="desc" data-i18n="pc4-p">Build new skills step by step, at your own pace.</p>
-      </li>
     </ul>
+    <div class="packages">
+      <div class="pk-intro">
+        <h2 data-i18n="pk-h2">Save with a package</h2>
+        <p data-i18n="pk-lead">Three sessions to build skills step by step. Use them within 60 days, and pay at your first session.</p>
+      </div>
+      <ul class="price-cards pk-cards">
+      <li class="price-card featured">
+        <div class="tags"><span class="tag" data-i18n="pc4-tag">Package</span> <span class="tag save" data-i18n="pkh-save">Save $30</span></div>
+        <h3 data-i18n="pkh-h">Three in-home sessions</h3>
+        <p class="amount">$195</p>
+        <p class="desc" data-i18n="pkh-p">Up to 60 minutes each, at your home.</p>
+      </li>
+      <li class="price-card featured">
+        <div class="tags"><span class="tag" data-i18n="pc4-tag">Package</span> <span class="tag save" data-i18n="pko-save">Save $15</span></div>
+        <h3 data-i18n="pko-h">Three online sessions</h3>
+        <p class="amount">$150</p>
+        <p class="desc" data-i18n="pko-p">Up to 60 minutes each, online.</p>
+      </li>
+      </ul>
+    </div>
+    <div class="included">
+      <h2 data-i18n="inc-h">Included in every session</h2>
+      <ul>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-1">Large-print, step-by-step notes to keep</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-2">Your device adjusted for easier use: bigger text, louder sound, a simpler home screen</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-3">A family member or caregiver is welcome to join, at no extra cost</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-4">We never keep your passwords. You stay in control of your accounts.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-5">One follow-up question by text or email within a week</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-6">Free access to <a href="https://www.tracing-care.com/learn" target="_blank" rel="noopener">Tracing Care</a>, our practice patient portal</span></li>
+      </ul>
+    </div>
     <p class="price-help"><span data-i18n="pr-call">Questions about prices? Call or text</span> <a href="tel:+19546870675">(954) 687-0675</a>.</p>
     <div class="expect">
       <h2 data-i18n="exp-h">What to expect</h2>
@@ -494,7 +545,41 @@ html[data-size="lg"] .expect ol,html[data-size="xl"] .expect ol{grid-template-co
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section tint" id="good-to-know">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="gk-eyebrow">Good to know</span>
+      <h2 data-i18n="gk-h2">Payment, scheduling, and travel</h2>
+    </div>
+    <div class="gk-grid">
+      <article class="gk-card">
+        <h3 data-i18n="gk-pay-h">How to pay</h3>
+        <p data-i18n="gk-pay-p">We accept card, Zelle, cash, or check. Single sessions are paid at the end of each session. Packages are paid in full at your first session.</p>
+        <p class="safe"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="gk-pay-safe">We will never ask for payment by gift card, and we'll never ask for your bank passwords.</span></p>
+      </article>
+      <article class="gk-card">
+        <h3 data-i18n="gk-cx-h">Need to reschedule?</h3>
+        <p data-i18n="gk-cx-p">Let us know at least 24 hours ahead, at no charge. Less than 24 hours' notice? The first time is on us. After that, there's a fee of half the session price. Illness and emergencies are always waived.</p>
+      </article>
+      <article class="gk-card">
+        <h3 data-i18n="gk-tr-h">In-home visits</h3>
+        <p data-i18n="gk-tr-lead">Travel fee per visit, based on where you live:</p>
+        <ul class="price-list">
+          <li><span data-i18n="gk-tr-1">Margate and nearby cities</span><span class="pl-price" data-i18n="gk-tr-free">No fee</span></li>
+          <li><span data-i18n="gk-tr-2">Rest of Broward County</span><span class="pl-price">$20</span></li>
+          <li><span data-i18n="gk-tr-3">Nearby Palm Beach and Miami-Dade, up to about an hour from Margate</span><span class="pl-price">$40</span></li>
+        </ul>
+        <p class="note" data-i18n="gk-tr-note">Nearby cities include Coconut Creek, Coral Springs, Parkland, Tamarac, North Lauderdale, and Pompano Beach. The fee applies to each visit, including package visits.</p>
+      </article>
+      <article class="gk-card">
+        <h3 data-i18n="gk-pk-h">About packages</h3>
+        <p data-i18n="gk-pk-p">Use your three sessions within 60 days. If health or life gets in the way, we'll refund any unused sessions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap">
     <div class="band on-navy">
       <div>
@@ -696,9 +781,6 @@ var SV_I18N = {
 "pc3-h": "In-home support",
 "pc3-p": "We come to you and work on the devices you already use.",
 "pc4-tag": "Package",
-"pc4-h": "Three-session learning package",
-"pc4-dur": "Three sessions",
-"pc4-p": "Build new skills step by step, at your own pace.",
 "pr-call": "Questions about prices? Call or text",
 "end-eyebrow": "Not sure where to start?",
 "end-p": "We'll talk about what you'd like to do and recommend the right option for you. No pressure.",
@@ -711,7 +793,38 @@ var SV_I18N = {
 "exp3-p": "Ask questions or request changes. We begin only after you say yes.",
 "exp4-h": "Your sessions begin",
 "exp4-p": "Practice on your own device, at your own pace, with written steps to keep.",
-"exp-quick": "Need just one quick fix, like connecting a printer? You can skip the plan and book a single session."
+"exp-quick": "Need just one quick fix, like connecting a printer? You can skip the plan and book a single session.",
+"pk-h2": "Save with a package",
+"pk-lead": "Three sessions to build skills step by step. Use them within 60 days, and pay at your first session.",
+"pkh-h": "Three in-home sessions",
+"pkh-save": "Save $30",
+"pkh-p": "Up to 60 minutes each, at your home.",
+"pko-h": "Three online sessions",
+"pko-save": "Save $15",
+"pko-p": "Up to 60 minutes each, online.",
+"inc-h": "Included in every session",
+"inc-1": "Large-print, step-by-step notes to keep",
+"inc-2": "Your device adjusted for easier use: bigger text, louder sound, a simpler home screen",
+"inc-3": "A family member or caregiver is welcome to join, at no extra cost",
+"inc-4": "We never keep your passwords. You stay in control of your accounts.",
+"inc-5": "One follow-up question by text or email within a week",
+"inc-6": "Free access to <a href=\"https://www.tracing-care.com/learn\" target=\"_blank\" rel=\"noopener\">Tracing Care</a>, our practice patient portal",
+"gk-eyebrow": "Good to know",
+"gk-h2": "Payment, scheduling, and travel",
+"gk-pay-h": "How to pay",
+"gk-pay-p": "We accept card, Zelle, cash, or check. Single sessions are paid at the end of each session. Packages are paid in full at your first session.",
+"gk-pay-safe": "We will never ask for payment by gift card, and we'll never ask for your bank passwords.",
+"gk-cx-h": "Need to reschedule?",
+"gk-cx-p": "Let us know at least 24 hours ahead, at no charge. Less than 24 hours' notice? The first time is on us. After that, there's a fee of half the session price. Illness and emergencies are always waived.",
+"gk-tr-h": "In-home visits",
+"gk-tr-lead": "Travel fee per visit, based on where you live:",
+"gk-tr-1": "Margate and nearby cities",
+"gk-tr-free": "No fee",
+"gk-tr-2": "Rest of Broward County",
+"gk-tr-3": "Nearby Palm Beach and Miami-Dade, up to about an hour from Margate",
+"gk-tr-note": "Nearby cities include Coconut Creek, Coral Springs, Parkland, Tamarac, North Lauderdale, and Pompano Beach. The fee applies to each visit, including package visits.",
+"gk-pk-h": "About packages",
+"gk-pk-p": "Use your three sessions within 60 days. If health or life gets in the way, we'll refund any unused sessions."
 },
 "es": {
 "lang-label": "Idioma",
@@ -865,9 +978,6 @@ var SV_I18N = {
 "pc3-h": "Apoyo en casa",
 "pc3-p": "Vamos a su casa y trabajamos con los aparatos que ya usa.",
 "pc4-tag": "Paquete",
-"pc4-h": "Paquete de aprendizaje de tres sesiones",
-"pc4-dur": "Tres sesiones",
-"pc4-p": "Aprenda nuevas habilidades paso a paso, a su propio ritmo.",
 "pr-call": "¿Preguntas sobre los precios? Llame o escriba al",
 "end-eyebrow": "¿No sabe por dónde empezar?",
 "end-p": "Hablaremos de lo que le gustaría hacer y le recomendaremos la mejor opción. Sin presión.",
@@ -880,7 +990,38 @@ var SV_I18N = {
 "exp3-p": "Haga preguntas o pida cambios. Empezamos solo cuando usted diga que sí.",
 "exp4-h": "Empiezan sus sesiones",
 "exp4-p": "Practique con su propio aparato, a su ritmo, con pasos por escrito para guardar.",
-"exp-quick": "¿Solo necesita un arreglo rápido, como conectar una impresora? Puede omitir el plan y reservar una sola sesión."
+"exp-quick": "¿Solo necesita un arreglo rápido, como conectar una impresora? Puede omitir el plan y reservar una sola sesión.",
+"pk-h2": "Ahorre con un paquete",
+"pk-lead": "Tres sesiones para aprender paso a paso. Úselas dentro de 60 días y pague en su primera sesión.",
+"pkh-h": "Tres sesiones en casa",
+"pkh-save": "Ahorre $30",
+"pkh-p": "Hasta 60 minutos cada una, en su casa.",
+"pko-h": "Tres sesiones en línea",
+"pko-save": "Ahorre $15",
+"pko-p": "Hasta 60 minutos cada una, en línea.",
+"inc-h": "Incluido en cada sesión",
+"inc-1": "Notas paso a paso en letra grande para guardar",
+"inc-2": "Su aparato ajustado para usarlo con más facilidad: letra más grande, sonido más alto y una pantalla de inicio más sencilla",
+"inc-3": "Un familiar o cuidador puede acompañarle, sin costo adicional",
+"inc-4": "Nunca guardamos sus contraseñas. Usted mantiene el control de sus cuentas.",
+"inc-5": "Una pregunta de seguimiento por mensaje o correo electrónico durante la semana siguiente",
+"inc-6": "Acceso gratis a <a href=\"https://www.tracing-care.com/learn\" target=\"_blank\" rel=\"noopener\">Tracing Care</a>, nuestro portal de práctica para pacientes",
+"gk-eyebrow": "Información útil",
+"gk-h2": "Pagos, citas y visitas",
+"gk-pay-h": "Cómo pagar",
+"gk-pay-p": "Aceptamos tarjeta, Zelle, efectivo o cheque. Las sesiones individuales se pagan al final de cada sesión. Los paquetes se pagan completos en la primera sesión.",
+"gk-pay-safe": "Nunca le pediremos que pague con tarjetas de regalo ni le pediremos las contraseñas de su banco.",
+"gk-cx-h": "¿Necesita cambiar su cita?",
+"gk-cx-p": "Avísenos con al menos 24 horas de anticipación, sin costo. ¿Con menos de 24 horas? La primera vez no se cobra. Después, se cobra la mitad del precio de la sesión. En caso de enfermedad o emergencia, nunca se cobra.",
+"gk-tr-h": "Visitas a domicilio",
+"gk-tr-lead": "Cargo por desplazamiento en cada visita, según dónde viva:",
+"gk-tr-1": "Margate y ciudades cercanas",
+"gk-tr-free": "Sin cargo",
+"gk-tr-2": "Resto del condado de Broward",
+"gk-tr-3": "Zonas cercanas de Palm Beach y Miami-Dade, hasta aproximadamente una hora de Margate",
+"gk-tr-note": "Las ciudades cercanas incluyen Coconut Creek, Coral Springs, Parkland, Tamarac, North Lauderdale y Pompano Beach. El cargo se aplica a cada visita, también a las de los paquetes.",
+"gk-pk-h": "Sobre los paquetes",
+"gk-pk-p": "Use sus tres sesiones dentro de 60 días. Si su salud u otro imprevisto se lo impide, le devolvemos el dinero de las sesiones no usadas."
 },
 "pt": {
 "lang-label": "Idioma",
@@ -1034,9 +1175,6 @@ var SV_I18N = {
 "pc3-h": "Apoio em casa",
 "pc3-p": "Vamos até você e trabalhamos com os aparelhos que você já usa.",
 "pc4-tag": "Pacote",
-"pc4-h": "Pacote de aprendizado com três sessões",
-"pc4-dur": "Três sessões",
-"pc4-p": "Aprenda novas habilidades passo a passo, no seu ritmo.",
 "pr-call": "Dúvidas sobre os preços? Ligue ou mande mensagem para",
 "end-eyebrow": "Não sabe por onde começar?",
 "end-p": "Vamos conversar sobre o que você gostaria de fazer e recomendar a melhor opção para você. Sem pressão.",
@@ -1049,7 +1187,38 @@ var SV_I18N = {
 "exp3-p": "Tire dúvidas ou peça mudanças. Só começamos depois que você disser sim.",
 "exp4-h": "Suas sessões começam",
 "exp4-p": "Pratique no seu próprio aparelho, no seu ritmo, com passos por escrito para guardar.",
-"exp-quick": "Precisa só de um ajuste rápido, como conectar uma impressora? Você pode pular o plano e agendar uma única sessão."
+"exp-quick": "Precisa só de um ajuste rápido, como conectar uma impressora? Você pode pular o plano e agendar uma única sessão.",
+"pk-h2": "Economize com um pacote",
+"pk-lead": "Três sessões para aprender passo a passo. Use em até 60 dias e pague na primeira sessão.",
+"pkh-h": "Três sessões em casa",
+"pkh-save": "Economize $30",
+"pkh-p": "Até 60 minutos cada, na sua casa.",
+"pko-h": "Três sessões online",
+"pko-save": "Economize $15",
+"pko-p": "Até 60 minutos cada, online.",
+"inc-h": "Incluído em toda sessão",
+"inc-1": "Anotações passo a passo em letra grande para guardar",
+"inc-2": "Seu aparelho ajustado para facilitar o uso: letra maior, som mais alto e uma tela inicial mais simples",
+"inc-3": "Um familiar ou cuidador pode participar, sem custo extra",
+"inc-4": "Nunca guardamos suas senhas. Você continua no controle das suas contas.",
+"inc-5": "Uma pergunta de acompanhamento por mensagem ou e-mail na semana seguinte",
+"inc-6": "Acesso grátis ao <a href=\"https://www.tracing-care.com/learn\" target=\"_blank\" rel=\"noopener\">Tracing Care</a>, nosso portal de prática para pacientes",
+"gk-eyebrow": "Bom saber",
+"gk-h2": "Pagamento, agendamento e visitas",
+"gk-pay-h": "Como pagar",
+"gk-pay-p": "Aceitamos cartão, Zelle, dinheiro ou cheque. Sessões avulsas são pagas no final de cada sessão. Pacotes são pagos integralmente na primeira sessão.",
+"gk-pay-safe": "Nunca vamos pedir pagamento com cartão-presente nem as senhas do seu banco.",
+"gk-cx-h": "Precisa remarcar?",
+"gk-cx-p": "Avise com pelo menos 24 horas de antecedência, sem custo. Com menos de 24 horas? A primeira vez é por nossa conta. Depois disso, cobramos metade do valor da sessão. Em caso de doença ou emergência, nunca cobramos.",
+"gk-tr-h": "Visitas em casa",
+"gk-tr-lead": "Taxa de deslocamento por visita, de acordo com onde você mora:",
+"gk-tr-1": "Margate e cidades próximas",
+"gk-tr-free": "Sem taxa",
+"gk-tr-2": "Restante do condado de Broward",
+"gk-tr-3": "Áreas próximas de Palm Beach e Miami-Dade, até cerca de uma hora de Margate",
+"gk-tr-note": "As cidades próximas incluem Coconut Creek, Coral Springs, Parkland, Tamarac, North Lauderdale e Pompano Beach. A taxa vale para cada visita, inclusive as dos pacotes.",
+"gk-pk-h": "Sobre os pacotes",
+"gk-pk-p": "Use suas três sessões em até 60 dias. Se a saúde ou algum imprevisto atrapalhar, devolvemos o valor das sessões não usadas."
 }
 };
 var SV_LANG = 'en';
