@@ -331,6 +331,8 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
   .topbar .textsize > span{margin-right:auto}
 }
 @media (max-width:420px){.topbar .tools{justify-content:flex-start}.quick-contact{width:auto}}
+
+.steps-quick{margin:1.6em 0 0;padding:1em 1.2em;background:var(--pale);border:1px solid var(--line);border-radius:14px;color:var(--navy)}
 </style>
 </head>
 <body>
@@ -504,10 +506,11 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
       <h2><span data-i18n="how-h2">Three simple steps</span></h2>
     </div>
     <ol class="steps">
-      <li><h3><span data-i18n="s1-h">Tell us what feels hard</span></h3><p><span data-i18n="s1-p">Book a free conversation or give us a call. Share what you'd like to do, in your own words.</span></p></li>
-      <li><h3><span data-i18n="s2-h">Learn at your own pace</span></h3><p><span data-i18n="s2-p">We work on your own device, one step at a time, and repeat anything as often as you like.</span></p></li>
-      <li><h3><span data-i18n="s3-h">Leave feeling confident</span></h3><p><span data-i18n="s3-p">You'll go home with written steps and know what to do next time.</span></p></li>
+      <li><h3><span data-i18n="s1-h">Free consultation</span></h3><p><span data-i18n="s1-p">Tell us what you'd like to do and how you like to learn. Book online or give us a call.</span></p></li>
+      <li><h3><span data-i18n="s2-h">Your personal plan</span></h3><p><span data-i18n="s2-p">Within 48 to 72 hours, we'll send your goals, suggested sessions, and price. We begin only after you say yes.</span></p></li>
+      <li><h3><span data-i18n="s3-h">Leave feeling confident</span></h3><p><span data-i18n="s3-p">Practice on your own device, at your own pace, with written steps to keep.</span></p></li>
     </ol>
+    <p class="steps-quick" data-i18n="exp-quick">Need just one quick fix, like connecting a printer? You can skip the plan and book a single session.</p>
 
     <div class="band on-navy" style="margin-top:64px">
       <div>
@@ -581,10 +584,10 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
     </div>
     <details><summary><span data-i18n="q1">Do I need to know anything about technology to start?</span></summary><p><span data-i18n="a1">Not at all. We start with what you already know and go from there. No question is too basic.</span></p></details>
     <details><summary><span data-i18n="q2">Is the first conversation really free?</span></summary><p><span data-i18n="a2">Yes. Every service starts with a free consultation, so you can tell us what you need and decide if it's a good fit.</span></p></details>
-    <details><summary><span data-i18n="q3">Can you help in person, or only online?</span></summary><p><span data-i18n="a3">Both. We can meet online, or in person at your home or a community center when available in South Florida.</span></p></details>
+    <details><summary><span data-i18n="q3">Can you help in person, or only online?</span></summary><p><span data-i18n="a3">Both. We can meet online, or in person at your home or a community center. In-home visits cover Broward County and nearby areas, up to about an hour from Margate.</span></p></details>
     <details><summary><span data-i18n="q4">Can I book help for my mother, father, or someone I care for?</span></summary><p><span data-i18n="a4">Yes. Many families reach out for a loved one. We can work with them directly, or with both of you together.</span></p></details>
     <details><summary><span data-i18n="q5">Should I bring my own phone or computer?</span></summary><p><span data-i18n="a5">If you can, yes. Practicing on your own device helps new skills stick. If not, we'll still help.</span></p></details>
-    <details><summary><span data-i18n="q6">How much does help cost?</span></summary><p><span data-i18n="a6">The first conversation is free. After that, one-on-one sessions are $55 online or $75 in your home, each up to an hour. <a href="/pricing/">See all prices</a>.</span></p></details>
+    <details><summary><span data-i18n="q6">How much does help cost?</span></summary><p><span data-i18n="a6">The first consultation is free. After that, one-on-one sessions are $55 online or $75 in your home, each up to an hour. A travel fee may apply outside the Margate area. <a href="/pricing/">See all prices</a>.</span></p></details>
   </div>
 </section>
 
@@ -716,12 +719,12 @@ var SV_I18N = {
 "t6-p": "If it has a screen or a password, just ask. We're happy to help.",
 "how-eyebrow": "How it works",
 "how-h2": "Three simple steps",
-"s1-h": "Tell us what feels hard",
-"s1-p": "Book a free conversation or give us a call. Share what you'd like to do, in your own words.",
-"s2-h": "Learn at your own pace",
-"s2-p": "We work on your own device, one step at a time, and repeat anything as often as you like.",
+"s1-h": "Free consultation",
+"s1-p": "Tell us what you'd like to do and how you like to learn. Book online or give us a call.",
+"s2-h": "Your personal plan",
+"s2-p": "Within 48 to 72 hours, we'll send your goals, suggested sessions, and price. We begin only after you say yes.",
 "s3-h": "Leave feeling confident",
-"s3-p": "You'll go home with written steps and know what to do next time.",
+"s3-p": "Practice on your own device, at your own pace, with written steps to keep.",
 "tc-eyebrow": "Free practice tool",
 "tc-h2": "Practice using a patient portal, with nothing to worry about",
 "tc-p": "Tracing Care is a practice patient portal with made-up patients and records. Try reading test results or sending a message to a doctor, safely. It's free and works in any web browser. Use it on your own or with Daniza as your guide.",
@@ -756,7 +759,7 @@ var SV_I18N = {
 "q2": "Is the first conversation really free?",
 "a2": "Yes. Every service starts with a free consultation, so you can tell us what you need and decide if it's a good fit.",
 "q3": "Can you help in person, or only online?",
-"a3": "Both. We can meet online, or in person at your home or a community center when available in South Florida.",
+"a3": "Both. We can meet online, or in person at your home or a community center. In-home visits cover Broward County and nearby areas, up to about an hour from Margate.",
 "q4": "Can I book help for my mother, father, or someone I care for?",
 "a4": "Yes. Many families reach out for a loved one. We can work with them directly, or with both of you together.",
 "q5": "Should I bring my own phone or computer?",
@@ -793,7 +796,8 @@ var SV_I18N = {
 "nav-pricing": "Pricing",
 "price-link": "See our simple, upfront prices",
 "q6": "How much does help cost?",
-"a6": "The first conversation is free. After that, one-on-one sessions are $55 online or $75 in your home, each up to an hour. <a href=\"/pricing/\">See all prices</a>."
+"a6": "The first consultation is free. After that, one-on-one sessions are $55 online or $75 in your home, each up to an hour. A travel fee may apply outside the Margate area. <a href=\"/pricing/\">See all prices</a>.",
+"exp-quick": "Need just one quick fix, like connecting a printer? You can skip the plan and book a single session."
 },
 "es": {
 "lang-label": "Idioma",
@@ -848,12 +852,12 @@ var SV_I18N = {
 "t6-p": "Si tiene pantalla o contraseña, pregúntenos. Con gusto le ayudamos.",
 "how-eyebrow": "Cómo funciona",
 "how-h2": "Tres pasos sencillos",
-"s1-h": "Cuéntenos qué se le hace difícil",
-"s1-p": "Reserve una conversación gratis o llámenos. Díganos qué le gustaría hacer, con sus propias palabras.",
-"s2-h": "Aprenda a su propio ritmo",
-"s2-p": "Trabajamos con su propio aparato, paso a paso, y repetimos todo las veces que quiera.",
+"s1-h": "Consulta gratis",
+"s1-p": "Cuéntenos qué le gustaría hacer y cómo prefiere aprender. Reserve en línea o llámenos.",
+"s2-h": "Su plan personal",
+"s2-p": "En un plazo de 48 a 72 horas, le enviamos sus metas, las sesiones sugeridas y el precio. Empezamos solo cuando usted diga que sí.",
 "s3-h": "Termine con confianza",
-"s3-p": "Se lleva los pasos por escrito y sabrá qué hacer la próxima vez.",
+"s3-p": "Practique con su propio aparato, a su ritmo, con pasos por escrito para guardar.",
 "tc-eyebrow": "Herramienta de práctica gratis",
 "tc-h2": "Practique con un portal de pacientes, sin ninguna preocupación",
 "tc-p": "Tracing Care es un portal de práctica con pacientes y expedientes inventados. Pruebe a leer resultados o enviar un mensaje al médico, sin riesgo. Es gratis y funciona en cualquier navegador. Úselo por su cuenta o con Daniza como guía.",
@@ -888,7 +892,7 @@ var SV_I18N = {
 "q2": "¿De verdad es gratis la primera conversación?",
 "a2": "Sí. Cada servicio empieza con una consulta gratis, para que nos cuente qué necesita y decida si le conviene.",
 "q3": "¿Pueden ayudar en persona o solo en línea?",
-"a3": "Las dos cosas. Podemos reunirnos en línea, o en persona en su casa o en un centro comunitario cuando sea posible en el sur de Florida.",
+"a3": "Las dos cosas. Podemos reunirnos en línea, o en persona en su casa o en un centro comunitario. Las visitas a domicilio cubren el condado de Broward y zonas cercanas, hasta aproximadamente una hora de Margate.",
 "q4": "¿Puedo reservar ayuda para mi madre, mi padre o alguien a quien cuido?",
 "a4": "Sí. Muchas familias nos contactan por un ser querido. Podemos trabajar directamente con esa persona o con ustedes dos juntos.",
 "q5": "¿Debo traer mi propio teléfono o computadora?",
@@ -925,7 +929,8 @@ var SV_I18N = {
 "nav-pricing": "Precios",
 "price-link": "Vea nuestros precios simples y claros",
 "q6": "¿Cuánto cuesta la ayuda?",
-"a6": "La primera conversación es gratis. Después, las sesiones personalizadas cuestan $55 en línea o $75 en su casa, de hasta una hora cada una. <a href=\"/pricing/\">Vea todos los precios</a>."
+"a6": "La primera consulta es gratis. Después, las sesiones personalizadas cuestan $55 en línea o $75 en su casa, de hasta una hora cada una. Puede aplicarse un cargo por desplazamiento fuera de la zona de Margate. <a href=\"/pricing/\">Vea todos los precios</a>.",
+"exp-quick": "¿Solo necesita un arreglo rápido, como conectar una impresora? Puede omitir el plan y reservar una sola sesión."
 },
 "pt": {
 "lang-label": "Idioma",
@@ -980,12 +985,12 @@ var SV_I18N = {
 "t6-p": "Se tem tela ou senha, é só perguntar. Ajudamos com prazer.",
 "how-eyebrow": "Como funciona",
 "how-h2": "Três passos simples",
-"s1-h": "Conte o que está difícil",
-"s1-p": "Agende uma conversa grátis ou ligue para nós. Conte o que você gostaria de fazer, do seu jeito.",
-"s2-h": "Aprenda no seu ritmo",
-"s2-p": "Usamos o seu próprio aparelho, um passo de cada vez, e repetimos quantas vezes você quiser.",
+"s1-h": "Consulta grátis",
+"s1-p": "Conte o que você gostaria de fazer e como prefere aprender. Agende online ou ligue para nós.",
+"s2-h": "Seu plano personalizado",
+"s2-p": "Em 48 a 72 horas, enviamos seus objetivos, as sessões sugeridas e o preço. Só começamos depois que você disser sim.",
 "s3-h": "Saia com confiança",
-"s3-p": "Você leva os passos por escrito e sabe o que fazer da próxima vez.",
+"s3-p": "Pratique no seu próprio aparelho, no seu ritmo, com passos por escrito para guardar.",
 "tc-eyebrow": "Ferramenta de prática grátis",
 "tc-h2": "Pratique com um portal do paciente, sem nenhuma preocupação",
 "tc-p": "O Tracing Care é um portal de prática com pacientes e prontuários inventados. Experimente ler resultados de exames ou mandar uma mensagem para o médico, com segurança. É grátis e funciona em qualquer navegador. Use sozinho ou com a Daniza como guia.",
@@ -1020,7 +1025,7 @@ var SV_I18N = {
 "q2": "A primeira conversa é mesmo grátis?",
 "a2": "Sim. Todo serviço começa com uma consulta grátis, para você contar o que precisa e decidir se é para você.",
 "q3": "Vocês ajudam pessoalmente ou só online?",
-"a3": "Os dois. Podemos nos encontrar online, ou pessoalmente na sua casa ou em um centro comunitário, quando possível, no sul da Flórida.",
+"a3": "Os dois. Podemos nos encontrar online, ou pessoalmente na sua casa ou em um centro comunitário. As visitas em casa cobrem o condado de Broward e áreas próximas, até cerca de uma hora de Margate.",
 "q4": "Posso agendar ajuda para minha mãe, meu pai ou alguém de quem eu cuido?",
 "a4": "Sim. Muitas famílias entram em contato por alguém que amam. Podemos trabalhar diretamente com essa pessoa ou com vocês dois juntos.",
 "q5": "Devo trazer meu próprio celular ou computador?",
@@ -1057,7 +1062,8 @@ var SV_I18N = {
 "nav-pricing": "Preços",
 "price-link": "Veja nossos preços simples e claros",
 "q6": "Quanto custa a ajuda?",
-"a6": "A primeira conversa é grátis. Depois, as sessões individuais custam $55 online ou $75 na sua casa, com até uma hora cada. <a href=\"/pricing/\">Veja todos os preços</a>."
+"a6": "A primeira consulta é grátis. Depois, as sessões individuais custam $55 online ou $75 na sua casa, com até uma hora cada. Pode haver taxa de deslocamento fora da região de Margate. <a href=\"/pricing/\">Veja todos os preços</a>.",
+"exp-quick": "Precisa só de um ajuste rápido, como conectar uma impressora? Você pode pular o plano e agendar uma única sessão."
 }
 };
 var SV_LANG = 'en';

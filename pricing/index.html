@@ -7,7 +7,7 @@
 <meta name="description" content="Simple, upfront prices for Solara Vita: patient, one-on-one technology help for older adults and families in South Florida, online or in person.">
 <meta name="theme-color" content="#082F57">
 <meta property="og:title" content="Pricing | Solara Vita">
-<meta property="og:description" content="Patient, one-on-one technology help for older adults, families, and caregivers in South Florida.">
+<meta property="og:description" content="Simple, upfront prices for patient, one-on-one technology help for older adults and families in South Florida: free consultation, online and in-home sessions, and packages.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Solara Vita">
 <meta property="og:url" content="https://www.solaravita.company/pricing/">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="Solara Vita logo with the words: Confidence in every click. Patient, one-on-one tech help for older adults, families, and caregivers.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pricing | Solara Vita">
-<meta name="twitter:description" content="Patient, one-on-one technology help for older adults, families, and caregivers in South Florida.">
+<meta name="twitter:description" content="Simple, upfront prices for patient, one-on-one technology help for older adults and families in South Florida: free consultation, online and in-home sessions, and packages.">
 <meta name="twitter:image" content="https://www.solaravita.company/solara-vita-share.png?v=2026-11">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-tile-32.png?v=2">
 <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-tile-16.png?v=2">
@@ -385,6 +385,13 @@ html[data-size="lg"] .expect ol,html[data-size="xl"] .expect ol{grid-template-co
 html[data-size="xl"] .price-cards.singles{grid-template-columns:minmax(0,1fr)}
 html[data-size="lg"] .included ul,html[data-size="xl"] .included ul,html[data-size="xl"] .gk-grid{grid-template-columns:minmax(0,1fr)}
 @media (max-width:640px){.price-cards.pk-cards{grid-template-columns:minmax(0,1fr)}.included,.gk-card{padding:22px 20px}}
+
+.travel-link{margin:.8em 0 0;font-size:.85rem}
+.travel-link a{color:var(--brown);font-weight:700}
+.band .band-call{margin:1em 0 0;color:rgba(255,255,255,.9)}
+.band .band-call a{color:var(--white);font-weight:700;white-space:nowrap}
+.band .band-call a:hover{color:var(--leaf)}
+.packages{margin-top:40px}
 </style>
 </head>
 <body>
@@ -488,7 +495,7 @@ html[data-size="lg"] .included ul,html[data-size="xl"] .included ul,html[data-si
         <p class="desc" data-i18n="pc1-p">Tell us what you need, and we'll suggest the best next step.</p>
       </li>
       <li class="price-card">
-        <h3 data-i18n="pc2-h">Virtual support</h3>
+        <h3 data-i18n="pc2-h">Online support</h3>
         <p class="dur" data-i18n="up60">Up to 60 minutes</p>
         <p class="amount">$55</p>
         <p class="desc" data-i18n="pc2-p">One-on-one help online, working on your own device.</p>
@@ -498,8 +505,20 @@ html[data-size="lg"] .included ul,html[data-size="xl"] .included ul,html[data-si
         <p class="dur" data-i18n="up60">Up to 60 minutes</p>
         <p class="amount">$75</p>
         <p class="desc" data-i18n="pc3-p">We come to you and work on the devices you already use.</p>
+        <p class="travel-link"><a href="#travel" data-i18n="travel-note">Travel fee may apply outside the Margate area.</a></p>
       </li>
     </ul>
+    <div class="included">
+      <h2 data-i18n="inc-h">Included in every session</h2>
+      <ul>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-0">Every session is with Daniza, founder of Solara Vita</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-2">Your device adjusted for easier use: bigger text, louder sound, a simpler home screen</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-3">A family member or caregiver is welcome to join, at no extra cost</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-4">We never keep your passwords. You stay in control of your accounts.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-5">One follow-up question by text or email within a week</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-6">Free access to <a href="https://www.tracing-care.com/learn" target="_blank" rel="noopener">Tracing Care</a>, our practice patient portal</span></li>
+      </ul>
+    </div>
     <div class="packages">
       <div class="pk-intro">
         <h2 data-i18n="pk-h2">Save with a package</h2>
@@ -511,6 +530,7 @@ html[data-size="lg"] .included ul,html[data-size="xl"] .included ul,html[data-si
         <h3 data-i18n="pkh-h">Three in-home sessions</h3>
         <p class="amount">$195</p>
         <p class="desc" data-i18n="pkh-p">Up to 60 minutes each, at your home.</p>
+        <p class="travel-link"><a href="#travel" data-i18n="travel-note">Travel fee may apply outside the Margate area.</a></p>
       </li>
       <li class="price-card featured">
         <div class="tags"><span class="tag" data-i18n="pc4-tag">Package</span> <span class="tag save" data-i18n="pko-save">Save $15</span></div>
@@ -520,21 +540,10 @@ html[data-size="lg"] .included ul,html[data-size="xl"] .included ul,html[data-si
       </li>
       </ul>
     </div>
-    <div class="included">
-      <h2 data-i18n="inc-h">Included in every session</h2>
-      <ul>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-2">Your device adjusted for easier use: bigger text, louder sound, a simpler home screen</span></li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-3">A family member or caregiver is welcome to join, at no extra cost</span></li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-4">We never keep your passwords. You stay in control of your accounts.</span></li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-5">One follow-up question by text or email within a week</span></li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="inc-6">Free access to <a href="https://www.tracing-care.com/learn" target="_blank" rel="noopener">Tracing Care</a>, our practice patient portal</span></li>
-      </ul>
-    </div>
-    <p class="price-help"><span data-i18n="pr-call">Questions about prices? Call or text</span> <a href="tel:+19546870675">(954) 687-0675</a>.</p>
     <div class="expect">
       <h2 data-i18n="exp-h">What to expect</h2>
       <ol>
-        <li><h3 data-i18n="exp1-h">Free conversation</h3><p data-i18n="exp1-p">Tell us what you'd like to do and how you like to learn.</p></li>
+        <li><h3 data-i18n="exp1-h">Free consultation</h3><p data-i18n="exp1-p">Tell us what you'd like to do and how you like to learn.</p></li>
         <li><h3 data-i18n="exp2-h">Your personal plan</h3><p data-i18n="exp2-p">Within 48 to 72 hours, we'll send your goals, suggested sessions, and price.</p></li>
         <li><h3 data-i18n="exp3-h">You review and approve</h3><p data-i18n="exp3-p">Ask questions or request changes. We begin only after you say yes.</p></li>
         <li><h3 data-i18n="exp4-h">Your sessions begin</h3><p data-i18n="exp4-p">Practice on your own device, at your own pace, with written steps to keep.</p></li>
@@ -557,9 +566,9 @@ html[data-size="lg"] .included ul,html[data-size="xl"] .included ul,html[data-si
       </article>
       <article class="gk-card">
         <h3 data-i18n="gk-cx-h">Need to reschedule?</h3>
-        <p data-i18n="gk-cx-p">Let us know at least 24 hours ahead, at no charge. Less than 24 hours' notice? The first time is on us. After that, there's a fee of half the session price. Illness and emergencies are always waived.</p>
+        <p data-i18n="gk-cx-p">Let us know at least 24 hours ahead, at no charge. Less than 24 hours' notice? The first time is on us. After that, there's a fee of half the session price. For packages, the fee is half the value of one package session. Illness and emergencies are always waived.</p>
       </article>
-      <article class="gk-card">
+      <article class="gk-card" id="travel">
         <h3 data-i18n="gk-tr-h">In-home visits</h3>
         <p data-i18n="gk-tr-lead">Travel fee per visit, based on where you live:</p>
         <ul class="price-list">
@@ -571,7 +580,7 @@ html[data-size="lg"] .included ul,html[data-size="xl"] .included ul,html[data-si
       </article>
       <article class="gk-card">
         <h3 data-i18n="gk-pk-h">About packages</h3>
-        <p data-i18n="gk-pk-p">Use your three sessions within 60 days. If health or life gets in the way, we'll refund any unused sessions.</p>
+        <p data-i18n="gk-pk-p">Use your three sessions within 60 days. If health or a family emergency gets in the way, we'll refund any unused sessions.</p>
       </article>
     </div>
   </div>
@@ -584,6 +593,7 @@ html[data-size="lg"] .included ul,html[data-size="xl"] .included ul,html[data-si
         <span class="eyebrow" data-i18n="end-eyebrow">Not sure where to start?</span>
         <h2 data-i18n="ct-h2">Start with a free conversation</h2>
         <p data-i18n="end-p">We'll talk about what you'd like to do and recommend the right option for you. No pressure.</p>
+        <p class="band-call"><span data-i18n="pr-call">Questions about prices? Call or text</span> <a href="tel:+19546870675">(954) 687-0675</a>.</p>
       </div>
       <div class="btn-row">
         <a class="btn btn-gold" href="https://calendly.com/solaravita/get-support" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="book">Book a free conversation</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
@@ -773,7 +783,7 @@ var SV_I18N = {
 "pc1-h": "Free consultation",
 "up30": "Up to 30 minutes",
 "pc1-p": "Tell us what you need, and we'll suggest the best next step.",
-"pc2-h": "Virtual support",
+"pc2-h": "Online support",
 "up60": "Up to 60 minutes",
 "pc2-p": "One-on-one help online, working on your own device.",
 "pc3-h": "In-home support",
@@ -783,7 +793,7 @@ var SV_I18N = {
 "end-eyebrow": "Not sure where to start?",
 "end-p": "We'll talk about what you'd like to do and recommend the right option for you. No pressure.",
 "exp-h": "What to expect",
-"exp1-h": "Free conversation",
+"exp1-h": "Free consultation",
 "exp1-p": "Tell us what you'd like to do and how you like to learn.",
 "exp2-h": "Your personal plan",
 "exp2-p": "Within 48 to 72 hours, we'll send your goals, suggested sessions, and price.",
@@ -811,7 +821,7 @@ var SV_I18N = {
 "gk-pay-h": "How to pay",
 "gk-pay-p": "We accept card, Zelle, cash, or check. Single sessions are paid at the end of each session. Packages are paid in full at your first session.",
 "gk-cx-h": "Need to reschedule?",
-"gk-cx-p": "Let us know at least 24 hours ahead, at no charge. Less than 24 hours' notice? The first time is on us. After that, there's a fee of half the session price. Illness and emergencies are always waived.",
+"gk-cx-p": "Let us know at least 24 hours ahead, at no charge. Less than 24 hours' notice? The first time is on us. After that, there's a fee of half the session price. For packages, the fee is half the value of one package session. Illness and emergencies are always waived.",
 "gk-tr-h": "In-home visits",
 "gk-tr-lead": "Travel fee per visit, based on where you live:",
 "gk-tr-1": "Margate and nearby cities",
@@ -820,7 +830,9 @@ var SV_I18N = {
 "gk-tr-3": "Nearby Palm Beach and Miami-Dade, up to about an hour from Margate",
 "gk-tr-note": "Nearby cities include Coconut Creek, Coral Springs, Parkland, Tamarac, North Lauderdale, and Pompano Beach. The fee applies to each visit, including package visits.",
 "gk-pk-h": "About packages",
-"gk-pk-p": "Use your three sessions within 60 days. If health or life gets in the way, we'll refund any unused sessions."
+"gk-pk-p": "Use your three sessions within 60 days. If health or a family emergency gets in the way, we'll refund any unused sessions.",
+"travel-note": "Travel fee may apply outside the Margate area.",
+"inc-0": "Every session is with Daniza, founder of Solara Vita"
 },
 "es": {
 "lang-label": "Idioma",
@@ -968,7 +980,7 @@ var SV_I18N = {
 "pc1-h": "Consulta gratis",
 "up30": "Hasta 30 minutos",
 "pc1-p": "Cuéntenos qué necesita y le sugerimos el mejor siguiente paso.",
-"pc2-h": "Apoyo virtual",
+"pc2-h": "Apoyo en línea",
 "up60": "Hasta 60 minutos",
 "pc2-p": "Ayuda personalizada en línea, con su propio aparato.",
 "pc3-h": "Apoyo en casa",
@@ -978,7 +990,7 @@ var SV_I18N = {
 "end-eyebrow": "¿No sabe por dónde empezar?",
 "end-p": "Hablaremos de lo que le gustaría hacer y le recomendaremos la mejor opción. Sin presión.",
 "exp-h": "Qué puede esperar",
-"exp1-h": "Conversación gratis",
+"exp1-h": "Consulta gratis",
 "exp1-p": "Cuéntenos qué le gustaría hacer y cómo prefiere aprender.",
 "exp2-h": "Su plan personal",
 "exp2-p": "En un plazo de 48 a 72 horas, le enviamos sus metas, las sesiones sugeridas y el precio.",
@@ -1006,7 +1018,7 @@ var SV_I18N = {
 "gk-pay-h": "Cómo pagar",
 "gk-pay-p": "Aceptamos tarjeta, Zelle, efectivo o cheque. Las sesiones individuales se pagan al final de cada sesión. Los paquetes se pagan completos en la primera sesión.",
 "gk-cx-h": "¿Necesita cambiar su cita?",
-"gk-cx-p": "Avísenos con al menos 24 horas de anticipación, sin costo. ¿Con menos de 24 horas? La primera vez no se cobra. Después, se cobra la mitad del precio de la sesión. En caso de enfermedad o emergencia, nunca se cobra.",
+"gk-cx-p": "Avísenos con al menos 24 horas de anticipación, sin costo. ¿Con menos de 24 horas? La primera vez no se cobra. Después, se cobra la mitad del precio de la sesión. En los paquetes, el cargo es la mitad del valor de una sesión del paquete. En caso de enfermedad o emergencia, nunca se cobra.",
 "gk-tr-h": "Visitas a domicilio",
 "gk-tr-lead": "Cargo por desplazamiento en cada visita, según dónde viva:",
 "gk-tr-1": "Margate y ciudades cercanas",
@@ -1015,7 +1027,9 @@ var SV_I18N = {
 "gk-tr-3": "Zonas cercanas de Palm Beach y Miami-Dade, hasta aproximadamente una hora de Margate",
 "gk-tr-note": "Las ciudades cercanas incluyen Coconut Creek, Coral Springs, Parkland, Tamarac, North Lauderdale y Pompano Beach. El cargo se aplica a cada visita, también a las de los paquetes.",
 "gk-pk-h": "Sobre los paquetes",
-"gk-pk-p": "Use sus tres sesiones dentro de 60 días. Si su salud u otro imprevisto se lo impide, le devolvemos el dinero de las sesiones no usadas."
+"gk-pk-p": "Use sus tres sesiones dentro de 60 días. Si un problema de salud o una emergencia familiar se lo impide, le devolvemos el dinero de las sesiones no usadas.",
+"travel-note": "Puede aplicarse un cargo por desplazamiento fuera de la zona de Margate.",
+"inc-0": "Cada sesión es con Daniza, fundadora de Solara Vita"
 },
 "pt": {
 "lang-label": "Idioma",
@@ -1173,7 +1187,7 @@ var SV_I18N = {
 "end-eyebrow": "Não sabe por onde começar?",
 "end-p": "Vamos conversar sobre o que você gostaria de fazer e recomendar a melhor opção para você. Sem pressão.",
 "exp-h": "O que esperar",
-"exp1-h": "Conversa grátis",
+"exp1-h": "Consulta grátis",
 "exp1-p": "Conte o que você gostaria de fazer e como prefere aprender.",
 "exp2-h": "Seu plano personalizado",
 "exp2-p": "Em 48 a 72 horas, enviamos seus objetivos, as sessões sugeridas e o preço.",
@@ -1201,7 +1215,7 @@ var SV_I18N = {
 "gk-pay-h": "Como pagar",
 "gk-pay-p": "Aceitamos cartão, Zelle, dinheiro ou cheque. Sessões avulsas são pagas no final de cada sessão. Pacotes são pagos integralmente na primeira sessão.",
 "gk-cx-h": "Precisa remarcar?",
-"gk-cx-p": "Avise com pelo menos 24 horas de antecedência, sem custo. Com menos de 24 horas? A primeira vez é por nossa conta. Depois disso, cobramos metade do valor da sessão. Em caso de doença ou emergência, nunca cobramos.",
+"gk-cx-p": "Avise com pelo menos 24 horas de antecedência, sem custo. Com menos de 24 horas? A primeira vez é por nossa conta. Depois disso, cobramos metade do valor da sessão. Nos pacotes, a taxa é metade do valor de uma sessão do pacote. Em caso de doença ou emergência, nunca cobramos.",
 "gk-tr-h": "Visitas em casa",
 "gk-tr-lead": "Taxa de deslocamento por visita, de acordo com onde você mora:",
 "gk-tr-1": "Margate e cidades próximas",
@@ -1210,7 +1224,9 @@ var SV_I18N = {
 "gk-tr-3": "Áreas próximas de Palm Beach e Miami-Dade, até cerca de uma hora de Margate",
 "gk-tr-note": "As cidades próximas incluem Coconut Creek, Coral Springs, Parkland, Tamarac, North Lauderdale e Pompano Beach. A taxa vale para cada visita, inclusive as dos pacotes.",
 "gk-pk-h": "Sobre os pacotes",
-"gk-pk-p": "Use suas três sessões em até 60 dias. Se a saúde ou algum imprevisto atrapalhar, devolvemos o valor das sessões não usadas."
+"gk-pk-p": "Use suas três sessões em até 60 dias. Se um problema de saúde ou uma emergência familiar atrapalhar, devolvemos o valor das sessões não usadas.",
+"travel-note": "Pode haver taxa de deslocamento fora da região de Margate.",
+"inc-0": "Toda sessão é com a Daniza, fundadora da Solara Vita"
 }
 };
 var SV_LANG = 'en';
