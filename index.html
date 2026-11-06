@@ -367,6 +367,22 @@ html[data-size="xl"] .family-band{grid-template-columns:minmax(0,1fr)}
 .book .reply-note{margin:1em 0 0;color:rgba(255,255,255,.85);font-size:.95rem}
 .footer .by-appt{margin-top:.2em;font-weight:700;color:var(--white)}
 .footer .review-link{margin-top:.6em;color:var(--leaf);font-weight:700}
+
+.book{align-items:start}
+.book-next{background:var(--warm);color:var(--navy);border-radius:20px;padding:32px}
+.book-next h3{color:var(--navy);font-size:1.25rem;margin:0 0 1em}
+.nx-steps{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.nx-steps li{display:flex;gap:16px;align-items:flex-start}
+.nx-num{flex:none;width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-weight:700;font-size:1.1rem}
+.nx-text{display:flex;flex-direction:column;gap:.2em}
+.nx-text strong{font-size:1.08rem;line-height:1.3}
+.nx-text span{color:var(--muted);line-height:1.45}
+.talk-first{margin-top:1.4em;padding-top:1.2em;border-top:1px solid rgba(255,255,255,.2)}
+.talk-first p{margin:0 0 .6em;font-weight:700;color:var(--white)}
+.talk-btns{display:flex;gap:12px;flex-wrap:wrap}
+.book .btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.6)}
+.book .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+@media (max-width:640px){.book-next{padding:22px}.book-intro .talk-btns .btn{flex:1;width:auto;margin-top:0}}
 </style>
 <script type="application/ld+json">
 {
@@ -531,7 +547,7 @@ html[data-size="xl"] .family-band{grid-template-columns:minmax(0,1fr)}
       <h1><span data-i18n="hero-h1">Technology help for everyday life <span class="hl">and for your health.</span></span></h1>
       <p class="lead"><span data-i18n="hero-lead">Patient, one-on-one support for older adults, their families, and caregivers in South Florida. From phones and email to patient portals and telehealth visits, we help at your pace, online or in person.</span></p>
       <div class="btn-row">
-        <a class="btn btn-gold" href="https://calendly.com/solaravita/get-support" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="book">Book a free consultation</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
+        <a class="btn btn-gold" href="https://calendly.com/solaravita/freeconsultation" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="book">Book a free consultation</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
       </div>
       <ul class="reassure">
         <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="re-1">First consultation is free</span></li>
@@ -583,7 +599,7 @@ html[data-size="xl"] .family-band{grid-template-columns:minmax(0,1fr)}
           <li><span data-i18n="fam-2">Get a short summary after each session, with your loved one's permission</span></li>
           <li><span data-i18n="fam-3">Book and pay for sessions on their behalf</span></li>
         </ul>
-        <a class="btn btn-outline" href="https://calendly.com/solaravita/get-support" target="_blank" rel="noopener"><span data-i18n="fam-btn">Book a free consultation for a loved one</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
+        <a class="btn btn-outline" href="https://calendly.com/solaravita/freeconsultation" target="_blank" rel="noopener"><span data-i18n="fam-btn">Book a free consultation for a loved one</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
       </div>
       <aside class="gift-card on-navy">
         <span class="tag"><span data-i18n="gift-tag">Holiday idea</span></span>
@@ -743,35 +759,25 @@ html[data-size="xl"] .family-band{grid-template-columns:minmax(0,1fr)}
       <div class="book-intro">
         <span class="eyebrow"><span data-i18n="nav-cta">Get started<span data-i18n="ct-eyebrow">Get started</span></span></span>
         <h2><span data-i18n="ct-h2">Start with a free consultation</span></h2>
-        <p><span data-i18n="ct-p">Pick a time that works for you. We'll talk about what you'd like to do and how we can help. No pressure, and no question is too small.</span></p>
-        <a class="btn btn-gold" href="https://calendly.com/solaravita/get-support" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="book">Book a free consultation</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
+        <p><span data-i18n="ct-p">Pick a time that works for you, by phone or Google Meet. Tell us what you'd like help with, in your own words. No pressure, and no question is too small.</span></p>
+        <a class="btn btn-gold" href="https://calendly.com/solaravita/freeconsultation" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="book">Book a free consultation</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
+        <div class="talk-first">
+          <p data-i18n="talk-first">Prefer to talk first?</p>
+          <div class="talk-btns">
+            <a class="btn btn-ghost" href="tel:+19546870675"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="qc-call">Call</span></a>
+            <a class="btn btn-ghost" href="sms:+19546870675"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="qc-text">Text</span></a>
+          </div>
+        </div>
         <p class="reply-note"><span data-i18n="reply">We reply to calls and texts within one business day.</span></p>
         <p class="price-link-wrap"><a class="price-link" href="/pricing/"><span data-i18n="price-link">See our simple, upfront prices</span></a></p>
       </div>
-      <div class="book-topics">
-        <h3 id="topics-label"><span data-i18n="topics">Or book your free consultation by topic</span></h3>
-        <ul class="choices" aria-labelledby="topics-label">
-        <li><a class="choice" href="https://calendly.com/solaravita/techsupport" target="_blank" rel="noopener">
-          <span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-devices"/></svg></span>
-          <span class="choice-text"><strong><span data-i18n="c1">Devices, Wi-Fi, and smart home</span></strong><span><span data-i18n="c1s">Phones, tablets, computers, and home internet</span></span></span>
-          <svg class="icon choice-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span>
-        </a></li>
-        <li><a class="choice" href="https://calendly.com/solaravita/careconsult" target="_blank" rel="noopener">
-          <span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-portal"/></svg></span>
-          <span class="choice-text"><strong><span data-i18n="t4-h"><span data-i18n="c2">Patient portals and telehealth</span></span></strong><span><span data-i18n="c2s">Test results, messages, and video visits</span></span></span>
-          <svg class="icon choice-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span>
-        </a></li>
-        <li><a class="choice" href="https://calendly.com/solaravita/safety" target="_blank" rel="noopener">
-          <span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
-          <span class="choice-text"><strong><span data-i18n="c3">Online safety and scams</span></strong><span><span data-i18n="c3s">Passwords, suspicious messages, and safer settings</span></span></span>
-          <svg class="icon choice-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span>
-        </a></li>
-        <li><a class="choice" href="https://calendly.com/solaravita/personalized-learning-consultation" target="_blank" rel="noopener">
-          <span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-sprout"/></svg></span>
-          <span class="choice-text"><strong><span data-i18n="c4">Ongoing personal lessons</span></strong><span><span data-i18n="c4s">A learning plan built around your goals</span></span></span>
-          <svg class="icon choice-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span>
-        </a></li>
-        </ul>
+      <div class="book-next">
+        <h3 id="next-label" data-i18n="nx-h">What happens next</h3>
+        <ol class="nx-steps" aria-labelledby="next-label">
+          <li><span class="nx-num" aria-hidden="true">1</span><span class="nx-text"><strong data-i18n="nx1-h">Pick a time</strong><span data-i18n="nx1-p">Choose a day and time, and tell us what you'd like help with.</span></span></li>
+          <li><span class="nx-num" aria-hidden="true">2</span><span class="nx-text"><strong data-i18n="nx2-h">We talk, up to 30 minutes</strong><span data-i18n="nx2-p">By phone or Google Meet. Family members are welcome to join.</span></span></li>
+          <li><span class="nx-num" aria-hidden="true">3</span><span class="nx-text"><strong data-i18n="nx3-h">Your personal plan</strong><span data-i18n="nx3-p">Within 48 to 72 hours, we send your goals, suggested sessions, and price. You decide if and when to start.</span></span></li>
+        </ol>
       </div>
     </div>
   </div>
@@ -915,7 +921,7 @@ var SV_I18N = {
 "a5": "If you can, yes. Practicing on your own device helps new skills stick. If not, we'll still help.",
 "ct-eyebrow": "Get started",
 "ct-h2": "Start with a free consultation",
-"ct-p": "Pick a time that works for you. We'll talk about what you'd like to do and how we can help. No pressure, and no question is too small.",
+"ct-p": "Pick a time that works for you, by phone or Google Meet. Tell us what you'd like help with, in your own words. No pressure, and no question is too small.",
 "topics": "Or book your free consultation by topic",
 "c1": "Devices, Wi-Fi, and smart home",
 "c1s": "Phones, tablets, computers, and home internet",
@@ -966,7 +972,15 @@ var SV_I18N = {
 "gift-email": "Email us",
 "reply": "We reply to calls and texts within one business day.",
 "by-appt": "By appointment only",
-"review": "Leave us a Google review"
+"review": "Leave us a Google review",
+"talk-first": "Prefer to talk first?",
+"nx-h": "What happens next",
+"nx1-h": "Pick a time",
+"nx1-p": "Choose a day and time, and tell us what you'd like help with.",
+"nx2-h": "We talk, up to 30 minutes",
+"nx2-p": "By phone or Google Meet. Family members are welcome to join.",
+"nx3-h": "Your personal plan",
+"nx3-p": "Within 48 to 72 hours, we send your goals, suggested sessions, and price. You decide if and when to start."
 },
 "es": {
 "lang-label": "Idioma",
@@ -1068,7 +1082,7 @@ var SV_I18N = {
 "a5": "Si puede, sí. Practicar con su propio aparato ayuda a recordar lo aprendido. Si no, igual le ayudamos.",
 "ct-eyebrow": "Comenzar",
 "ct-h2": "Empiece con una consulta gratis",
-"ct-p": "Elija el horario que le convenga. Hablaremos de lo que le gustaría hacer y de cómo podemos ayudarle. Sin presión, y ninguna pregunta es demasiado pequeña.",
+"ct-p": "Elija un horario que le convenga, por teléfono o Google Meet. Cuéntenos con qué le gustaría recibir ayuda, con sus propias palabras. Sin presión, y ninguna pregunta es demasiado pequeña.",
 "topics": "O reserve su consulta gratis por tema",
 "c1": "Aparatos, Wi-Fi y hogar inteligente",
 "c1s": "Teléfonos, tabletas, computadoras e internet en casa",
@@ -1119,7 +1133,15 @@ var SV_I18N = {
 "gift-email": "Escríbanos",
 "reply": "Respondemos llamadas y mensajes en un plazo de un día hábil.",
 "by-appt": "Solo con cita previa",
-"review": "Déjenos una reseña en Google"
+"review": "Déjenos una reseña en Google",
+"talk-first": "¿Prefiere hablar primero?",
+"nx-h": "Qué sigue",
+"nx1-h": "Elija un horario",
+"nx1-p": "Elija el día y la hora, y cuéntenos con qué le gustaría recibir ayuda.",
+"nx2-h": "Conversamos, hasta 30 minutos",
+"nx2-p": "Por teléfono o Google Meet. Sus familiares son bienvenidos.",
+"nx3-h": "Su plan personal",
+"nx3-p": "En 48 a 72 horas, le enviamos sus metas, las sesiones sugeridas y el precio. Usted decide si quiere empezar y cuándo."
 },
 "pt": {
 "lang-label": "Idioma",
@@ -1221,7 +1243,7 @@ var SV_I18N = {
 "a5": "Se puder, sim. Praticar no seu próprio aparelho ajuda a fixar o que aprendeu. Se não puder, ajudamos do mesmo jeito.",
 "ct-eyebrow": "Começar",
 "ct-h2": "Comece com uma consulta grátis",
-"ct-p": "Escolha o horário que for melhor para você. Vamos conversar sobre o que você gostaria de fazer e como podemos ajudar. Sem pressão, e nenhuma pergunta é pequena demais.",
+"ct-p": "Escolha um horário que funcione para você, por telefone ou Google Meet. Conte com o que você gostaria de ajuda, do seu jeito. Sem pressão, e nenhuma pergunta é pequena demais.",
 "topics": "Ou agende sua consulta grátis por assunto",
 "c1": "Aparelhos, Wi-Fi e casa inteligente",
 "c1s": "Celulares, tablets, computadores e internet em casa",
@@ -1272,7 +1294,15 @@ var SV_I18N = {
 "gift-email": "Mande um e-mail",
 "reply": "Respondemos ligações e mensagens em até um dia útil.",
 "by-appt": "Somente com agendamento",
-"review": "Deixe uma avaliação no Google"
+"review": "Deixe uma avaliação no Google",
+"talk-first": "Prefere conversar primeiro?",
+"nx-h": "O que acontece depois",
+"nx1-h": "Escolha um horário",
+"nx1-p": "Escolha o dia e o horário, e conte com o que você gostaria de ajuda.",
+"nx2-h": "Conversamos, até 30 minutos",
+"nx2-p": "Por telefone ou Google Meet. Familiares são bem-vindos.",
+"nx3-h": "Seu plano personalizado",
+"nx3-p": "Em 48 a 72 horas, enviamos seus objetivos, as sessões sugeridas e o preço. Você decide se e quando quer começar."
 }
 };
 var SV_LANG = 'en';
