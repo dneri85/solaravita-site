@@ -198,7 +198,8 @@ p{margin:0 0 1em}
 .choice-icon{width:44px;height:44px;flex:none;border-radius:12px;background:var(--navy);color:var(--gold);display:grid;place-items:center}
 .choice-text{display:flex;flex-direction:column;min-width:0;flex:1}
 .choice-text strong{line-height:1.3}
-.choice-text span{color:var(--green);font-weight:700;font-size:.85rem}
+.choice-text > span{color:var(--muted);font-weight:400;font-size:.85rem;line-height:1.35;margin-top:.15em}
+.choice-text strong span{color:var(--navy);font-weight:700}
 .choice-arrow{color:var(--navy);width:1.2em;height:1.2em}
 /* Footer */
 .footer{background:var(--navy);color:var(--white);padding:56px 0 28px;margin-top:0}
@@ -603,26 +604,26 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
         <p class="price-link-wrap"><a class="price-link" href="/pricing/"><span data-i18n="price-link">See our simple, upfront prices</span></a></p>
       </div>
       <div class="book-topics">
-        <h3 id="topics-label"><span data-i18n="topics">Or choose a topic</span></h3>
+        <h3 id="topics-label"><span data-i18n="topics">Or book your free consultation by topic</span></h3>
         <ul class="choices" aria-labelledby="topics-label">
         <li><a class="choice" href="https://calendly.com/solaravita/techsupport" target="_blank" rel="noopener">
           <span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-devices"/></svg></span>
-          <span class="choice-text"><strong><span data-i18n="c1">Devices, Wi-Fi, and smart home</span></strong><span><span data-i18n="c1s">Free tech consultation</span></span></span>
+          <span class="choice-text"><strong><span data-i18n="c1">Devices, Wi-Fi, and smart home</span></strong><span><span data-i18n="c1s">Phones, tablets, computers, and home internet</span></span></span>
           <svg class="icon choice-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span>
         </a></li>
         <li><a class="choice" href="https://calendly.com/solaravita/careconsult" target="_blank" rel="noopener">
           <span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-portal"/></svg></span>
-          <span class="choice-text"><strong><span data-i18n="t4-h"><span data-i18n="c2">Patient portals and telehealth</span></span></strong><span><span data-i18n="c2s">Free healthcare help</span></span></span>
+          <span class="choice-text"><strong><span data-i18n="t4-h"><span data-i18n="c2">Patient portals and telehealth</span></span></strong><span><span data-i18n="c2s">Test results, messages, and video visits</span></span></span>
           <svg class="icon choice-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span>
         </a></li>
         <li><a class="choice" href="https://calendly.com/solaravita/safety" target="_blank" rel="noopener">
           <span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
-          <span class="choice-text"><strong><span data-i18n="c3">Online safety and scams</span></strong><span><span data-i18n="c3s">Free safety session</span></span></span>
+          <span class="choice-text"><strong><span data-i18n="c3">Online safety and scams</span></strong><span><span data-i18n="c3s">Passwords, suspicious messages, and safer settings</span></span></span>
           <svg class="icon choice-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span>
         </a></li>
         <li><a class="choice" href="https://calendly.com/solaravita/personalized-learning-consultation" target="_blank" rel="noopener">
           <span class="choice-icon"><svg class="icon" aria-hidden="true"><use href="#i-sprout"/></svg></span>
-          <span class="choice-text"><strong><span data-i18n="c4">Ongoing personal lessons</span></strong><span><span data-i18n="c4s">Free learning session</span></span></span>
+          <span class="choice-text"><strong><span data-i18n="c4">Ongoing personal lessons</span></strong><span><span data-i18n="c4s">A learning plan built around your goals</span></span></span>
           <svg class="icon choice-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span>
         </a></li>
         </ul>
@@ -767,15 +768,15 @@ var SV_I18N = {
 "ct-eyebrow": "Get free help",
 "ct-h2": "Start with a free conversation",
 "ct-p": "Pick a time that works for you. We'll talk about what you'd like to do and how we can help. No pressure, and no question is too small.",
-"topics": "Or choose a topic",
+"topics": "Or book your free consultation by topic",
 "c1": "Devices, Wi-Fi, and smart home",
-"c1s": "Free tech consultation",
+"c1s": "Phones, tablets, computers, and home internet",
 "c2": "Patient portals and telehealth",
-"c2s": "Free healthcare help",
+"c2s": "Test results, messages, and video visits",
 "c3": "Online safety and scams",
-"c3s": "Free safety session",
+"c3s": "Passwords, suspicious messages, and safer settings",
 "c4": "Ongoing personal lessons",
-"c4s": "Free learning session",
+"c4s": "A learning plan built around your goals",
 "tagline": "Confidence in every click.<br><strong>Always human.</strong>",
 "ft-explore": "Explore",
 "nav-services": "What we help with",
@@ -900,15 +901,15 @@ var SV_I18N = {
 "ct-eyebrow": "Ayuda gratis",
 "ct-h2": "Empiece con una conversación gratis",
 "ct-p": "Elija el horario que le convenga. Hablaremos de lo que le gustaría hacer y de cómo podemos ayudarle. Sin presión, y ninguna pregunta es demasiado pequeña.",
-"topics": "O elija un tema",
+"topics": "O reserve su consulta gratis por tema",
 "c1": "Aparatos, Wi-Fi y hogar inteligente",
-"c1s": "Consulta de tecnología gratis",
+"c1s": "Teléfonos, tabletas, computadoras e internet en casa",
 "c2": "Portales de pacientes y telesalud",
-"c2s": "Ayuda gratis con la salud digital",
+"c2s": "Resultados, mensajes y consultas por video",
 "c3": "Seguridad en internet y estafas",
-"c3s": "Sesión de seguridad gratis",
+"c3s": "Contraseñas, mensajes sospechosos y opciones más seguras",
 "c4": "Clases personales continuas",
-"c4s": "Sesión de aprendizaje gratis",
+"c4s": "Un plan de aprendizaje según sus metas",
 "tagline": "Confianza en cada clic.<br><strong>Siempre humano.</strong>",
 "ft-explore": "Explorar",
 "nav-services": "En qué ayudamos",
@@ -1033,15 +1034,15 @@ var SV_I18N = {
 "ct-eyebrow": "Ajuda grátis",
 "ct-h2": "Comece com uma conversa grátis",
 "ct-p": "Escolha o horário que for melhor para você. Vamos conversar sobre o que você gostaria de fazer e como podemos ajudar. Sem pressão, e nenhuma pergunta é pequena demais.",
-"topics": "Ou escolha um assunto",
+"topics": "Ou agende sua consulta grátis por assunto",
 "c1": "Aparelhos, Wi-Fi e casa inteligente",
-"c1s": "Consulta de tecnologia grátis",
+"c1s": "Celulares, tablets, computadores e internet em casa",
 "c2": "Portais de pacientes e telessaúde",
-"c2s": "Ajuda grátis com a saúde digital",
+"c2s": "Resultados de exames, mensagens e consultas por vídeo",
 "c3": "Segurança na internet e golpes",
-"c3s": "Sessão de segurança grátis",
+"c3s": "Senhas, mensagens suspeitas e configurações mais seguras",
 "c4": "Aulas individuais contínuas",
-"c4s": "Sessão de aprendizado grátis",
+"c4s": "Um plano de aprendizado feito para os seus objetivos",
 "tagline": "Confiança em cada clique.<br><strong>Sempre humano.</strong>",
 "ft-explore": "Explorar",
 "nav-services": "Com o que ajudamos",
