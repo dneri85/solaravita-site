@@ -348,6 +348,16 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
 @media (max-width:1000px){.price-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:900px){.price-panels{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:640px){.price-cards{grid-template-columns:minmax(0,1fr)}.price-panel{padding:24px}.price-list li{flex-direction:column;align-items:flex-start;gap:2px}.pl-price{text-align:left;white-space:normal}}
+.expect{margin-top:40px;background:var(--pale);border:1px solid var(--line);border-radius:var(--radius);padding:28px 32px}
+.expect h2{font-size:1.3rem;margin:0 0 .8em}
+.expect ol{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px 24px;counter-reset:x}
+.expect li{counter-increment:x;position:relative;padding-left:2.5em}
+.expect li:before{content:counter(x);position:absolute;left:0;top:0;display:grid;place-items:center;width:1.9em;height:1.9em;border-radius:50%;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem}
+.expect h3{font-size:1rem;margin:0 0 .2em}
+.expect p{margin:0;font-size:.9rem;line-height:1.45;color:var(--muted)}
+@media (max-width:1000px){.expect ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+html[data-size="lg"] .expect ol,html[data-size="xl"] .expect ol{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:640px){.expect{padding:22px 20px}.expect ol,html[data-size="lg"] .expect ol,html[data-size="xl"] .expect ol{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
@@ -470,6 +480,15 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
       </li>
     </ul>
     <p class="price-help"><span data-i18n="pr-call">Questions about prices? Call or text</span> <a href="tel:+19546870675">(954) 687-0675</a>.</p>
+    <div class="expect">
+      <h2 data-i18n="exp-h">What to expect</h2>
+      <ol>
+        <li><h3 data-i18n="exp1-h">Free conversation</h3><p data-i18n="exp1-p">Tell us what you'd like to do and how you like to learn.</p></li>
+        <li><h3 data-i18n="exp2-h">Your personal plan</h3><p data-i18n="exp2-p">Within 48 to 72 hours, we'll send your goals, suggested sessions, and price.</p></li>
+        <li><h3 data-i18n="exp3-h">You review and approve</h3><p data-i18n="exp3-p">Ask questions or request changes. We begin only after you say yes.</p></li>
+        <li><h3 data-i18n="exp4-h">Your sessions begin</h3><p data-i18n="exp4-p">Practice on your own device, at your own pace, with written steps to keep.</p></li>
+      </ol>
+    </div>
   </div>
 </section>
 
@@ -680,7 +699,16 @@ var SV_I18N = {
 "pc4-p": "Build new skills step by step, at your own pace.",
 "pr-call": "Questions about prices? Call or text",
 "end-eyebrow": "Not sure where to start?",
-"end-p": "We'll talk about what you'd like to do and recommend the right option for you. No pressure."
+"end-p": "We'll talk about what you'd like to do and recommend the right option for you. No pressure.",
+"exp-h": "What to expect",
+"exp1-h": "Free conversation",
+"exp1-p": "Tell us what you'd like to do and how you like to learn.",
+"exp2-h": "Your personal plan",
+"exp2-p": "Within 48 to 72 hours, we'll send your goals, suggested sessions, and price.",
+"exp3-h": "You review and approve",
+"exp3-p": "Ask questions or request changes. We begin only after you say yes.",
+"exp4-h": "Your sessions begin",
+"exp4-p": "Practice on your own device, at your own pace, with written steps to keep."
 },
 "es": {
 "lang-label": "Idioma",
@@ -839,7 +867,16 @@ var SV_I18N = {
 "pc4-p": "Aprenda nuevas habilidades paso a paso, a su propio ritmo.",
 "pr-call": "¿Preguntas sobre los precios? Llame o escriba al",
 "end-eyebrow": "¿No sabe por dónde empezar?",
-"end-p": "Hablaremos de lo que le gustaría hacer y le recomendaremos la mejor opción. Sin presión."
+"end-p": "Hablaremos de lo que le gustaría hacer y le recomendaremos la mejor opción. Sin presión.",
+"exp-h": "Qué puede esperar",
+"exp1-h": "Conversación gratis",
+"exp1-p": "Cuéntenos qué le gustaría hacer y cómo prefiere aprender.",
+"exp2-h": "Su plan personal",
+"exp2-p": "En un plazo de 48 a 72 horas, le enviamos sus metas, las sesiones sugeridas y el precio.",
+"exp3-h": "Usted revisa y aprueba",
+"exp3-p": "Haga preguntas o pida cambios. Empezamos solo cuando usted diga que sí.",
+"exp4-h": "Empiezan sus sesiones",
+"exp4-p": "Practique con su propio aparato, a su ritmo, con pasos por escrito para guardar."
 },
 "pt": {
 "lang-label": "Idioma",
@@ -998,7 +1035,16 @@ var SV_I18N = {
 "pc4-p": "Aprenda novas habilidades passo a passo, no seu ritmo.",
 "pr-call": "Dúvidas sobre os preços? Ligue ou mande mensagem para",
 "end-eyebrow": "Não sabe por onde começar?",
-"end-p": "Vamos conversar sobre o que você gostaria de fazer e recomendar a melhor opção para você. Sem pressão."
+"end-p": "Vamos conversar sobre o que você gostaria de fazer e recomendar a melhor opção para você. Sem pressão.",
+"exp-h": "O que esperar",
+"exp1-h": "Conversa grátis",
+"exp1-p": "Conte o que você gostaria de fazer e como prefere aprender.",
+"exp2-h": "Seu plano personalizado",
+"exp2-p": "Em 48 a 72 horas, enviamos seus objetivos, as sessões sugeridas e o preço.",
+"exp3-h": "Você revisa e aprova",
+"exp3-p": "Tire dúvidas ou peça mudanças. Só começamos depois que você disser sim.",
+"exp4-h": "Suas sessões começam",
+"exp4-p": "Pratique no seu próprio aparelho, no seu ritmo, com passos por escrito para guardar."
 }
 };
 var SV_LANG = 'en';
