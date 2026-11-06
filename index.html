@@ -102,7 +102,7 @@ p{margin:0 0 1em}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}
 .brand .mark{height:52px;width:auto}
 .brand .wordmark{height:22px;width:auto}
-.nav{display:flex;align-items:center;gap:26px}
+.nav{display:flex;align-items:center;gap:20px}
 .nav a{color:var(--navy);font-weight:700;text-decoration:none;font-size:.95rem}
 .nav a:not(.btn):hover{color:var(--green);text-decoration:underline}
 .menu-btn{display:none;min-height:48px;padding:0 18px;border-radius:999px;border:2px solid var(--navy);background:transparent;color:var(--navy);font:inherit;font-weight:700;cursor:pointer}
@@ -334,6 +334,15 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
 @media (max-width:420px){.topbar .tools{justify-content:flex-start}.quick-contact{width:auto}}
 
 .steps-quick{margin:1.6em 0 0;padding:1em 1.2em;background:var(--pale);border:1px solid var(--line);border-radius:14px;color:var(--navy)}
+
+.founder-photo{width:112px;height:112px;border-radius:50%;object-fit:cover;border:4px solid var(--gold);margin:0 0 16px}
+
+.header .brand{flex-shrink:0}
+.header.nav-collapsed .menu-btn{display:inline-flex;align-items:center}
+.header.nav-collapsed .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--warm);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:4px;padding:14px 20px 22px;box-shadow:0 14px 24px rgba(8,47,87,.12)}
+.header.nav-collapsed .nav.open{display:flex}
+.header.nav-collapsed .nav a{padding:12px 6px;font-size:1.05rem}
+.header.nav-collapsed .nav .btn{margin-top:8px}
 </style>
 </head>
 <body>
@@ -398,7 +407,7 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
       <a href="#about"><span data-i18n="nav-about">About</span></a>
       <a href="/pricing/"><span data-i18n="nav-pricing">Pricing</span></a>
       <a href="#faq"><span data-i18n="nav-faq">Questions</span></a>
-      <a class="btn btn-gold" href="#contact"><span data-i18n="nav-cta"><span data-i18n="ct-eyebrow">Get free help</span></span></a>
+      <a class="btn btn-gold" href="#contact"><span data-i18n="nav-cta">Get started<span data-i18n="ct-eyebrow">Get started</span></span></a>
     </nav>
   </div>
 </header>
@@ -413,10 +422,10 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
       <h1><span data-i18n="hero-h1">Technology help that is <span class="hl">patient, kind, and made for you.</span></span></h1>
       <p class="lead"><span data-i18n="hero-lead">One-on-one support for older adults, their families, and caregivers in South Florida. We help with phones, computers, patient portals, and staying safe online, at your pace, online or in person.</span></p>
       <div class="btn-row">
-        <a class="btn btn-gold" href="https://calendly.com/solaravita/get-support" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="book">Book a free conversation</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
+        <a class="btn btn-gold" href="https://calendly.com/solaravita/get-support" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="book">Book a free consultation</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
       </div>
       <ul class="reassure">
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="re-1">First conversation is free</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="re-1">First consultation is free</span></li>
         <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="re-2">No question is too small</span></li>
         <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="re-3">Always a real person</span></li>
       </ul>
@@ -567,9 +576,10 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
       </ul>
     </div>
     <aside class="founder">
+      <img class="founder-photo" src="images/daniza.jpg" alt="Daniza Neri, founder of Solara Vita" width="160" height="160" loading="lazy">
       <p class="name">Daniza Neri</p>
       <p class="role"><span data-i18n="role">Founder &amp; Digital Navigator</span></p>
-      <p><span data-i18n="bio-1">Daniza has a background in technical support, user research operations, and project management. She listens first, asks what matters to you, and builds each session around the things you actually want to do.</span></p>
+      <p><span data-i18n="bio-1">Daniza spent over three years at Apple, including as a Technical Specialist, helping people get comfortable with their iPhones, iPads, and Macs. She has since worked in technology and research, and she speaks English and Portuguese. She listens first, asks what matters to you, and builds each session around the things you actually want to do.</span></p>
       <p><span data-i18n="bio-2">She started Solara Vita to help older adults and their families feel confident with the technology that now shapes everyday life and healthcare.</span></p>
       <a href="https://www.danineri.com" target="_blank" rel="noopener"><span data-i18n="bio-link">Meet Daniza and learn about her experience</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
     </aside>
@@ -584,8 +594,9 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
       <h2><span data-i18n="faq-h2">Questions people often ask</span></h2>
     </div>
     <details><summary><span data-i18n="q1">Do I need to know anything about technology to start?</span></summary><p><span data-i18n="a1">Not at all. We start with what you already know and go from there. No question is too basic.</span></p></details>
-    <details><summary><span data-i18n="q2">Is the first conversation really free?</span></summary><p><span data-i18n="a2">Yes. Every service starts with a free consultation, so you can tell us what you need and decide if it's a good fit.</span></p></details>
+    <details><summary><span data-i18n="q2">Is the first consultation really free?</span></summary><p><span data-i18n="a2">Yes. Every service starts with a free consultation, so you can tell us what you need and decide if it's a good fit.</span></p></details>
     <details><summary><span data-i18n="q3">Can you help in person, or only online?</span></summary><p><span data-i18n="a3">Both. We can meet online, or in person at your home or a community center. In-home visits cover Broward County and nearby areas, up to about an hour from Margate.</span></p></details>
+    <details><summary><span data-i18n="q7">What languages do you speak?</span></summary><p><span data-i18n="a7">Daniza speaks English and Portuguese. For Spanish speakers, we use a translation service so we can understand each other.</span></p></details>
     <details><summary><span data-i18n="q4">Can I book help for my mother, father, or someone I care for?</span></summary><p><span data-i18n="a4">Yes. Many families reach out for a loved one. We can work with them directly, or with both of you together.</span></p></details>
     <details><summary><span data-i18n="q5">Should I bring my own phone or computer?</span></summary><p><span data-i18n="a5">If you can, yes. Practicing on your own device helps new skills stick. If not, we'll still help.</span></p></details>
     <details><summary><span data-i18n="q6">How much does help cost?</span></summary><p><span data-i18n="a6">The first consultation is free. After that, one-on-one sessions are $55 online or $75 in your home, each up to an hour. A travel fee may apply outside the Margate area. <a href="/pricing/">See all prices</a>.</span></p></details>
@@ -597,10 +608,10 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
   <div class="wrap">
     <div class="book on-navy">
       <div class="book-intro">
-        <span class="eyebrow"><span data-i18n="nav-cta"><span data-i18n="ct-eyebrow">Get free help</span></span></span>
-        <h2><span data-i18n="ct-h2">Start with a free conversation</span></h2>
+        <span class="eyebrow"><span data-i18n="nav-cta">Get started<span data-i18n="ct-eyebrow">Get started</span></span></span>
+        <h2><span data-i18n="ct-h2">Start with a free consultation</span></h2>
         <p><span data-i18n="ct-p">Pick a time that works for you. We'll talk about what you'd like to do and how we can help. No pressure, and no question is too small.</span></p>
-        <a class="btn btn-gold" href="https://calendly.com/solaravita/get-support" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="book">Book a free conversation</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
+        <a class="btn btn-gold" href="https://calendly.com/solaravita/get-support" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="book">Book a free consultation</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
         <p class="price-link-wrap"><a class="price-link" href="/pricing/"><span data-i18n="price-link">See our simple, upfront prices</span></a></p>
       </div>
       <div class="book-topics">
@@ -655,7 +666,7 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
         <p class="ft-phone"><span class="nw">(954) 687-0675</span></p>
         <p class="ft-phone-links"><a href="tel:+19546870675" data-i18n="qc-call">Call</a><a href="sms:+19546870675" data-i18n="qc-text">Text</a></p>
         <a href="mailto:daniza@solaravita.company">daniza@solaravita.company</a>
-        <p style="margin-top:.8em"><span data-i18n="ft-serving">Serving South Florida, online and in person</span></p>
+        <p style="margin-top:.8em"><span data-i18n="ft-serving">Serving South Florida online, and Broward County in person</span></p>
       </div>
     </div>
     <div class="legal">
@@ -680,13 +691,13 @@ var SV_I18N = {
 "nav-events": "Events",
 "nav-about": "About",
 "nav-faq": "Questions",
-"nav-cta": "Get free help",
+"nav-cta": "Get started",
 "hero-eyebrow": "Confidence in every click",
 "hero-h1": "Technology help that is <span class=\"hl\">patient, kind, and made for you.</span>",
 "hero-lead": "One-on-one support for older adults, their families, and caregivers in South Florida. We help with phones, computers, patient portals, and staying safe online, at your pace, online or in person.",
-"book": "Book a free conversation",
+"book": "Book a free consultation",
 "newtab": " (opens in a new tab)",
-"re-1": "First conversation is free",
+"re-1": "First consultation is free",
 "re-2": "No question is too small",
 "re-3": "Always a real person",
 "who-eyebrow": "Who we help",
@@ -750,14 +761,14 @@ var SV_I18N = {
 "ab-2": "Practice on the devices you already own",
 "ab-3": "Respect for your experience and your choices",
 "role": "Founder &amp; Digital Navigator",
-"bio-1": "Daniza has a background in technical support, user research operations, and project management. She listens first, asks what matters to you, and builds each session around the things you actually want to do.",
+"bio-1": "Daniza spent over three years at Apple, including as a Technical Specialist, helping people get comfortable with their iPhones, iPads, and Macs. She has since worked in technology and research, and she speaks English and Portuguese. She listens first, asks what matters to you, and builds each session around the things you actually want to do.",
 "bio-2": "She started Solara Vita to help older adults and their families feel confident with the technology that now shapes everyday life and healthcare.",
 "bio-link": "Meet Daniza and learn about her experience",
 "faq-eyebrow": "Common questions",
 "faq-h2": "Questions people often ask",
 "q1": "Do I need to know anything about technology to start?",
 "a1": "Not at all. We start with what you already know and go from there. No question is too basic.",
-"q2": "Is the first conversation really free?",
+"q2": "Is the first consultation really free?",
 "a2": "Yes. Every service starts with a free consultation, so you can tell us what you need and decide if it's a good fit.",
 "q3": "Can you help in person, or only online?",
 "a3": "Both. We can meet online, or in person at your home or a community center. In-home visits cover Broward County and nearby areas, up to about an hour from Margate.",
@@ -765,8 +776,8 @@ var SV_I18N = {
 "a4": "Yes. Many families reach out for a loved one. We can work with them directly, or with both of you together.",
 "q5": "Should I bring my own phone or computer?",
 "a5": "If you can, yes. Practicing on your own device helps new skills stick. If not, we'll still help.",
-"ct-eyebrow": "Get free help",
-"ct-h2": "Start with a free conversation",
+"ct-eyebrow": "Get started",
+"ct-h2": "Start with a free consultation",
 "ct-p": "Pick a time that works for you. We'll talk about what you'd like to do and how we can help. No pressure, and no question is too small.",
 "topics": "Or book your free consultation by topic",
 "c1": "Devices, Wi-Fi, and smart home",
@@ -781,7 +792,7 @@ var SV_I18N = {
 "ft-explore": "Explore",
 "nav-services": "What we help with",
 "ft-contact": "Contact",
-"ft-serving": "Serving South Florida, online and in person",
+"ft-serving": "Serving South Florida online, and Broward County in person",
 "legal": "Solara Vita provides educational, operational, and technology support. Our services are not medical advice and do not replace care from a licensed healthcare professional.",
 "rights": "Solara Vita, LLC. All rights reserved.",
 "title": "Solara Vita | Confidence in Every Click",
@@ -798,7 +809,10 @@ var SV_I18N = {
 "price-link": "See our simple, upfront prices",
 "q6": "How much does help cost?",
 "a6": "The first consultation is free. After that, one-on-one sessions are $55 online or $75 in your home, each up to an hour. A travel fee may apply outside the Margate area. <a href=\"/pricing/\">See all prices</a>.",
-"exp-quick": "Need just one quick fix, like connecting a printer? You can skip the plan and book a single session."
+"exp-quick": "Need just one quick fix, like connecting a printer? You can skip the plan and book a single session.",
+"pr-lead": "Every service starts with a free consultation. Tell us what you need, and we'll recommend the right next step and its price before we begin.",
+"q7": "What languages do you speak?",
+"a7": "Daniza speaks English and Portuguese. For Spanish speakers, we use a translation service so we can understand each other."
 },
 "es": {
 "lang-label": "Idioma",
@@ -811,15 +825,15 @@ var SV_I18N = {
 "menu": "Menú",
 "nav-help": "Cómo ayudamos",
 "nav-events": "Eventos",
-"nav-about": "Quiénes somos",
+"nav-about": "Nosotros",
 "nav-faq": "Preguntas",
-"nav-cta": "Ayuda gratis",
+"nav-cta": "Comenzar",
 "hero-eyebrow": "Confianza en cada clic",
 "hero-h1": "Ayuda con la tecnología <span class=\"hl\">paciente, amable y pensada para usted.</span>",
 "hero-lead": "Apoyo personalizado para adultos mayores, sus familias y cuidadores en el sur de Florida. Ayudamos con teléfonos, computadoras, portales de pacientes y seguridad en internet, a su ritmo, en línea o en persona.",
-"book": "Reserve una conversación gratis",
+"book": "Reserve una consulta gratis",
 "newtab": " (se abre en una pestaña nueva)",
-"re-1": "La primera conversación es gratis",
+"re-1": "La primera consulta es gratis",
 "re-2": "Ninguna pregunta es demasiado pequeña",
 "re-3": "Siempre una persona real",
 "who-eyebrow": "A quién ayudamos",
@@ -883,14 +897,14 @@ var SV_I18N = {
 "ab-2": "Práctica con los aparatos que ya tiene",
 "ab-3": "Respeto por su experiencia y sus decisiones",
 "role": "Fundadora y Navegadora Digital",
-"bio-1": "Daniza tiene experiencia en soporte técnico, operaciones de investigación con usuarios y gestión de proyectos. Primero escucha, le pregunta qué es importante para usted y organiza cada sesión según lo que usted realmente quiere hacer.",
+"bio-1": "Daniza trabajó más de tres años en Apple, incluso como Especialista Técnica, ayudando a las personas a sentirse cómodas con sus iPhone, iPad y Mac. Desde entonces ha trabajado en tecnología e investigación, y habla inglés y portugués. Primero escucha, le pregunta qué es importante para usted y organiza cada sesión según lo que usted realmente quiere hacer.",
 "bio-2": "Fundó Solara Vita para ayudar a los adultos mayores y sus familias a sentirse seguros con la tecnología que hoy forma parte de la vida diaria y de la atención médica.",
 "bio-link": "Conozca a Daniza y su experiencia (en inglés)",
 "faq-eyebrow": "Preguntas frecuentes",
 "faq-h2": "Lo que la gente suele preguntar",
 "q1": "¿Necesito saber algo de tecnología para empezar?",
 "a1": "Para nada. Empezamos con lo que usted ya sabe y seguimos desde ahí. Ninguna pregunta es demasiado básica.",
-"q2": "¿De verdad es gratis la primera conversación?",
+"q2": "¿De verdad es gratis la primera consulta?",
 "a2": "Sí. Cada servicio empieza con una consulta gratis, para que nos cuente qué necesita y decida si le conviene.",
 "q3": "¿Pueden ayudar en persona o solo en línea?",
 "a3": "Las dos cosas. Podemos reunirnos en línea, o en persona en su casa o en un centro comunitario. Las visitas a domicilio cubren el condado de Broward y zonas cercanas, hasta aproximadamente una hora de Margate.",
@@ -898,8 +912,8 @@ var SV_I18N = {
 "a4": "Sí. Muchas familias nos contactan por un ser querido. Podemos trabajar directamente con esa persona o con ustedes dos juntos.",
 "q5": "¿Debo traer mi propio teléfono o computadora?",
 "a5": "Si puede, sí. Practicar con su propio aparato ayuda a recordar lo aprendido. Si no, igual le ayudamos.",
-"ct-eyebrow": "Ayuda gratis",
-"ct-h2": "Empiece con una conversación gratis",
+"ct-eyebrow": "Comenzar",
+"ct-h2": "Empiece con una consulta gratis",
 "ct-p": "Elija el horario que le convenga. Hablaremos de lo que le gustaría hacer y de cómo podemos ayudarle. Sin presión, y ninguna pregunta es demasiado pequeña.",
 "topics": "O reserve su consulta gratis por tema",
 "c1": "Aparatos, Wi-Fi y hogar inteligente",
@@ -914,7 +928,7 @@ var SV_I18N = {
 "ft-explore": "Explorar",
 "nav-services": "En qué ayudamos",
 "ft-contact": "Contacto",
-"ft-serving": "Al servicio del sur de Florida, en línea y en persona",
+"ft-serving": "Atendemos el sur de Florida en línea y el condado de Broward en persona",
 "legal": "Solara Vita ofrece apoyo educativo, operativo y tecnológico. Nuestros servicios no son consejo médico y no reemplazan la atención de un profesional de la salud con licencia.",
 "rights": "Solara Vita, LLC. Todos los derechos reservados.",
 "title": "Solara Vita | Confianza en cada clic",
@@ -926,12 +940,15 @@ var SV_I18N = {
 "aria-brand": "Solara Vita, volver arriba",
 "aria-main": "Principal",
 "aria-footer": "Pie de página",
-"langnote": "Las páginas para reservar una cita están en inglés. Si necesita ayuda para reservar, llame o envíe un mensaje al (954) 687-0675.",
+"langnote": "Las sesiones son en inglés o portugués. Para español, usamos un servicio de traducción. Las páginas para reservar están en inglés; si necesita ayuda, llame o escriba al (954) 687-0675.",
 "nav-pricing": "Precios",
 "price-link": "Vea nuestros precios simples y claros",
 "q6": "¿Cuánto cuesta la ayuda?",
 "a6": "La primera consulta es gratis. Después, las sesiones personalizadas cuestan $55 en línea o $75 en su casa, de hasta una hora cada una. Puede aplicarse un cargo por desplazamiento fuera de la zona de Margate. <a href=\"/pricing/\">Vea todos los precios</a>.",
-"exp-quick": "¿Solo necesita un arreglo rápido, como conectar una impresora? Puede omitir el plan y reservar una sola sesión."
+"exp-quick": "¿Solo necesita un arreglo rápido, como conectar una impresora? Puede omitir el plan y reservar una sola sesión.",
+"pr-lead": "Cada servicio empieza con una consulta gratis. Cuéntenos qué necesita y le recomendaremos el siguiente paso, con su precio, antes de empezar.",
+"q7": "¿En qué idiomas atienden?",
+"a7": "Daniza habla inglés y portugués. Para quienes hablan español, usamos un servicio de traducción para entendernos bien."
 },
 "pt": {
 "lang-label": "Idioma",
@@ -946,13 +963,13 @@ var SV_I18N = {
 "nav-events": "Eventos",
 "nav-about": "Sobre nós",
 "nav-faq": "Perguntas",
-"nav-cta": "Ajuda grátis",
+"nav-cta": "Começar",
 "hero-eyebrow": "Confiança em cada clique",
 "hero-h1": "Ajuda com tecnologia <span class=\"hl\">paciente, gentil e feita para você.</span>",
 "hero-lead": "Apoio individual para idosos, suas famílias e cuidadores no sul da Flórida. Ajudamos com celulares, computadores, portais de pacientes e segurança na internet, no seu ritmo, online ou pessoalmente.",
-"book": "Agende uma conversa grátis",
+"book": "Agende uma consulta grátis",
 "newtab": " (abre em uma nova aba)",
-"re-1": "A primeira conversa é grátis",
+"re-1": "A primeira consulta é grátis",
 "re-2": "Nenhuma pergunta é pequena demais",
 "re-3": "Sempre uma pessoa de verdade",
 "who-eyebrow": "Quem ajudamos",
@@ -1016,14 +1033,14 @@ var SV_I18N = {
 "ab-2": "Prática com os aparelhos que você já tem",
 "ab-3": "Respeito pela sua experiência e pelas suas escolhas",
 "role": "Fundadora e Navegadora Digital",
-"bio-1": "A Daniza tem experiência em suporte técnico, operações de pesquisa com usuários e gestão de projetos. Ela escuta primeiro, pergunta o que é importante para você e monta cada sessão em torno do que você realmente quer fazer.",
+"bio-1": "A Daniza trabalhou mais de três anos na Apple, inclusive como Especialista Técnica, ajudando pessoas a se sentirem à vontade com seus iPhones, iPads e Macs. Desde então, trabalha com tecnologia e pesquisa, e fala inglês e português. Ela escuta primeiro, pergunta o que é importante para você e monta cada sessão em torno do que você realmente quer fazer.",
 "bio-2": "Ela criou a Solara Vita para ajudar idosos e suas famílias a se sentirem confiantes com a tecnologia que hoje faz parte do dia a dia e da saúde.",
 "bio-link": "Conheça a Daniza e a experiência dela (em inglês)",
 "faq-eyebrow": "Perguntas frequentes",
 "faq-h2": "O que as pessoas costumam perguntar",
 "q1": "Preciso saber algo de tecnologia para começar?",
 "a1": "De jeito nenhum. Começamos pelo que você já sabe e seguimos a partir daí. Nenhuma pergunta é básica demais.",
-"q2": "A primeira conversa é mesmo grátis?",
+"q2": "A primeira consulta é mesmo grátis?",
 "a2": "Sim. Todo serviço começa com uma consulta grátis, para você contar o que precisa e decidir se é para você.",
 "q3": "Vocês ajudam pessoalmente ou só online?",
 "a3": "Os dois. Podemos nos encontrar online, ou pessoalmente na sua casa ou em um centro comunitário. As visitas em casa cobrem o condado de Broward e áreas próximas, até cerca de uma hora de Margate.",
@@ -1031,8 +1048,8 @@ var SV_I18N = {
 "a4": "Sim. Muitas famílias entram em contato por alguém que amam. Podemos trabalhar diretamente com essa pessoa ou com vocês dois juntos.",
 "q5": "Devo trazer meu próprio celular ou computador?",
 "a5": "Se puder, sim. Praticar no seu próprio aparelho ajuda a fixar o que aprendeu. Se não puder, ajudamos do mesmo jeito.",
-"ct-eyebrow": "Ajuda grátis",
-"ct-h2": "Comece com uma conversa grátis",
+"ct-eyebrow": "Começar",
+"ct-h2": "Comece com uma consulta grátis",
 "ct-p": "Escolha o horário que for melhor para você. Vamos conversar sobre o que você gostaria de fazer e como podemos ajudar. Sem pressão, e nenhuma pergunta é pequena demais.",
 "topics": "Ou agende sua consulta grátis por assunto",
 "c1": "Aparelhos, Wi-Fi e casa inteligente",
@@ -1047,7 +1064,7 @@ var SV_I18N = {
 "ft-explore": "Explorar",
 "nav-services": "Com o que ajudamos",
 "ft-contact": "Contato",
-"ft-serving": "Atendemos o sul da Flórida, online e pessoalmente",
+"ft-serving": "Atendemos o sul da Flórida online e o condado de Broward pessoalmente",
 "legal": "A Solara Vita oferece apoio educacional, operacional e tecnológico. Nossos serviços não são orientação médica e não substituem o atendimento de um profissional de saúde habilitado.",
 "rights": "Solara Vita, LLC. Todos os direitos reservados.",
 "title": "Solara Vita | Confiança em cada clique",
@@ -1059,12 +1076,15 @@ var SV_I18N = {
 "aria-brand": "Solara Vita, voltar ao topo",
 "aria-main": "Principal",
 "aria-footer": "Rodapé",
-"langnote": "As páginas de agendamento estão em inglês. Se precisar de ajuda para agendar, ligue ou mande mensagem para (954) 687-0675.",
+"langnote": "As sessões podem ser em português ou inglês. As páginas de agendamento estão em inglês; se precisar de ajuda para agendar, ligue ou mande mensagem para (954) 687-0675.",
 "nav-pricing": "Preços",
 "price-link": "Veja nossos preços simples e claros",
 "q6": "Quanto custa a ajuda?",
 "a6": "A primeira consulta é grátis. Depois, as sessões individuais custam $55 online ou $75 na sua casa, com até uma hora cada. Pode haver taxa de deslocamento fora da região de Margate. <a href=\"/pricing/\">Veja todos os preços</a>.",
-"exp-quick": "Precisa só de um ajuste rápido, como conectar uma impressora? Você pode pular o plano e agendar uma única sessão."
+"exp-quick": "Precisa só de um ajuste rápido, como conectar uma impressora? Você pode pular o plano e agendar uma única sessão.",
+"pr-lead": "Todo serviço começa com uma consulta grátis. Conte o que você precisa e vamos recomendar o próximo passo, com o preço, antes de começar.",
+"q7": "Em quais idiomas vocês atendem?",
+"a7": "A Daniza fala inglês e português. Para quem fala espanhol, usamos um serviço de tradução para nos entendermos bem."
 }
 };
 var SV_LANG = 'en';
@@ -1087,6 +1107,7 @@ function setLang(lang) {
   var tl=document.querySelector('.tb-lang'); if (tl) tl.textContent = lang.toUpperCase();
   document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
   document.title = t.title;
+  if (window.svFitNav) window.svFitNav();
   try { localStorage.setItem('sv-lang', lang); } catch (e) {}
 }
 (function(){var tb=document.getElementById('toolsBtn'),tp=document.getElementById('tools');if(!tb)return;
@@ -1125,6 +1146,25 @@ document.querySelectorAll('.lang-btn').forEach(function (b) {
   })});
 
   document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+<script>
+/* Fold the menu into the Menu button whenever the links don't fit (longer languages, bigger text) */
+(function(){
+  var header=document.querySelector('.header'),nav=document.getElementById('nav'),brand=header&&header.querySelector('.brand'),btn=document.getElementById('menuBtn');
+  if(!header||!nav||!brand)return;
+  function fit(){
+    header.classList.remove('nav-collapsed');
+    if(getComputedStyle(btn).display!=='none')return;
+    var wrap=header.querySelector('.wrap');
+    if(brand.offsetWidth+nav.scrollWidth+20>wrap.clientWidth)header.classList.add('nav-collapsed');
+  }
+  window.svFitNav=fit;
+  document.querySelectorAll('.lang-btn,.textsize button').forEach(function(b){b.addEventListener('click',function(){setTimeout(fit,0)})});
+  window.addEventListener('resize',fit);
+  window.addEventListener('load',fit);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+  fit();
 })();
 </script>
 </body>
