@@ -329,7 +329,7 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
 /* Pricing page */
 .price-cards{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .price-card{background:var(--white);border:1px solid var(--line);border-top:6px solid var(--gold);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
-.price-card.featured{border-top-color:var(--green)}
+.price-card.featured{border-top-color:var(--label)}
 .price-card .tags{margin:0 0 .6em}
 .price-card h3{font-size:1.1rem;margin:0 0 .25em}
 .price-card .dur{color:var(--label);font-weight:700;font-size:.9rem;margin:0 0 .9em}
@@ -353,7 +353,7 @@ html[data-size="lg"] .nav .btn,html[data-size="xl"] .nav .btn{margin-top:8px}
 .expect h2{font-size:1.3rem;margin:0 0 .8em}
 .expect ol{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px 24px;counter-reset:x}
 .expect li{counter-increment:x;position:relative;padding-left:2.5em}
-.expect li:before{content:counter(x);position:absolute;left:0;top:0;display:grid;place-items:center;width:1.9em;height:1.9em;border-radius:50%;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem}
+.expect li:before{content:counter(x);position:absolute;left:0;top:0;display:grid;place-items:center;width:1.9em;height:1.9em;border-radius:50%;background:var(--navy);color:var(--white);font-weight:700;font-size:.95rem}
 .expect h3{font-size:1rem;margin:0 0 .2em}
 .expect p{margin:0;font-size:.9rem;line-height:1.45;color:var(--muted)}
 .expect .quick{margin:1.1em 0 0;padding-top:1em;border-top:1px solid var(--line);font-size:.95rem;color:var(--navy)}
@@ -366,7 +366,8 @@ html[data-size="lg"] .expect ol,html[data-size="xl"] .expect ol{grid-template-co
 .pk-intro h2{font-size:1.4rem;margin:0 0 .4em}
 .pk-intro p{color:var(--muted);margin:0}
 .price-cards.pk-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
-.tag.save{background:#DDF3E6;color:var(--green)}
+.tag.save{background:var(--label);color:var(--white)}
+.price-card.featured .tag:not(.save){background:var(--pale);color:var(--navy)}
 .included{margin-top:40px;background:var(--white);border:1px solid var(--line);border-left:6px solid var(--green);border-radius:var(--radius);padding:28px 32px}
 .included h2{font-size:1.3rem;margin:0 0 .8em}
 .included ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 32px}
