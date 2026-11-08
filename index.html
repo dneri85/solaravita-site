@@ -119,6 +119,7 @@ p{margin:0 0 1em}
 /* Sections */
 .section{padding:84px 0}
 .section.tint{background:var(--pale);border-block:1px solid var(--line)}
+.section.accent{background:var(--softgold);border-block:1px solid #E9D49A}
 .section-head{margin-bottom:40px}
 .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
@@ -384,7 +385,7 @@ html[data-size="xl"] .family-band{grid-template-columns:minmax(0,1fr)}
 .book .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 @media (max-width:640px){.book-next{padding:22px}.book-intro .talk-btns .btn{flex:1;width:auto;margin-top:0}}
 /* Senior centers */
-#centers{background:var(--softgold);padding-bottom:72px}
+#centers{padding-bottom:72px}
 #centers + #about{padding-top:72px}
 #centers .why div{border-top-color:var(--navy)}
 #centers .ctopic{border-color:#E9D49A}
@@ -744,7 +745,7 @@ html[data-size="xl"] .centers-box .checks{grid-template-columns:minmax(0,1fr)}
 </section>
 
 <!-- Senior centers -->
-<section class="section" id="centers">
+<section class="section accent" id="centers">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow"><span data-i18n="sc-eyebrow">For senior centers and community groups</span></span>
