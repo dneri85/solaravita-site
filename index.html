@@ -417,6 +417,26 @@ html[data-size="lg"] .centers-box,html[data-size="xl"] .centers-box{grid-templat
 @media (max-width:900px){.why{grid-template-columns:minmax(0,1fr);gap:24px;margin-bottom:48px}.centers-box{grid-template-columns:minmax(0,1fr);gap:28px;padding:36px}}
 @media (max-width:640px){.ctopics,html[data-size="lg"] .ctopics,html[data-size="xl"] .ctopics{grid-template-columns:minmax(0,1fr)}.centers-box{padding:26px 22px}.centers-box .checks{grid-template-columns:minmax(0,1fr)}.ctopic{flex-direction:row;gap:16px}}
 html[data-size="xl"] .centers-box .checks{grid-template-columns:minmax(0,1fr)}
+
+/* Booking panel, refined */
+.book{align-items:stretch;gap:56px}
+.book .eyebrow{color:var(--leaf)}
+.book-intro{display:flex;flex-direction:column;justify-content:center}
+.book-intro h2{margin-bottom:.4em}
+.book-intro .btn{align-self:flex-start}
+.book .talk-first{margin-top:1.8em;padding-top:1.4em}
+.book .talk-h{font-size:1rem}
+.book .talk-first .reply-note{margin:.9em 0 0;font-size:.9rem;font-weight:400;color:rgba(255,255,255,.88)}
+.book .talk-num{font-weight:700;color:var(--white)}
+.book .price-link-wrap{margin:1.4em 0 0}
+.book .price-link{font-weight:400;font-size:.95rem}
+.book-next{display:flex;flex-direction:column;justify-content:center;padding:40px 36px}
+.nx-steps{gap:0}
+.nx-steps li{position:relative;padding-bottom:28px}
+.nx-steps li:last-child{padding-bottom:0}
+.nx-steps li:not(:last-child)::before{content:"";position:absolute;left:19px;top:44px;bottom:4px;width:2px;background:var(--line)}
+.nx-num{color:var(--white)}
+@media (max-width:640px){.book-intro .btn{align-self:stretch}.book-next{padding:26px 22px}}
 </style>
 <script type="application/ld+json">
 {
@@ -841,13 +861,13 @@ html[data-size="xl"] .centers-box .checks{grid-template-columns:minmax(0,1fr)}
         <p><span data-i18n="ct-p">Pick a time that works for you, by phone or Google Meet. Tell us what you'd like help with, in your own words. No pressure, and no question is too small.</span></p>
         <a class="btn btn-gold" href="https://calendly.com/solaravita/free-consultation" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="book">Book a free consultation</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
         <div class="talk-first">
-          <p data-i18n="talk-first">Prefer to talk first?</p>
+          <p class="talk-h" data-i18n="talk-first">Prefer to talk first?</p>
           <div class="talk-btns">
             <a class="btn btn-ghost" href="tel:+19546870675"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="qc-call">Call</span></a>
             <a class="btn btn-ghost" href="sms:+19546870675"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="qc-text">Text</span></a>
           </div>
+        <p class="reply-note"><span class="nw talk-num">(954) 687-0675</span> · <span data-i18n="reply">We reply to calls and texts within one business day.</span></p>
         </div>
-        <p class="reply-note"><span data-i18n="reply">We reply to calls and texts within one business day.</span></p>
         <p class="price-link-wrap"><a class="price-link" href="/pricing/"><span data-i18n="price-link">See our simple, upfront prices</span></a></p>
       </div>
       <div class="book-next">
@@ -1001,7 +1021,7 @@ var SV_I18N = {
 "a5": "If you can, yes. Practicing on your own device helps new skills stick. If not, we'll still help.",
 "ct-eyebrow": "Get started",
 "ct-h2": "Start with a free consultation",
-"ct-p": "Pick a time that works for you, by phone or Google Meet. Tell us what you'd like help with, in your own words. No pressure, and no question is too small.",
+"ct-p": "A relaxed, 30-minute conversation about what you'd like to do with your technology. No pressure, and no question is too small.",
 "topics": "Or book your free consultation by topic",
 "c1": "Devices, Wi-Fi, and smart home",
 "c1s": "Phones, tablets, computers, and home internet",
@@ -1192,7 +1212,7 @@ var SV_I18N = {
 "a5": "Si puede, sí. Practicar con su propio aparato ayuda a recordar lo aprendido. Si no, igual le ayudamos.",
 "ct-eyebrow": "Comenzar",
 "ct-h2": "Empiece con una consulta gratis",
-"ct-p": "Elija un horario que le convenga, por teléfono o Google Meet. Cuéntenos con qué le gustaría recibir ayuda, con sus propias palabras. Sin presión, y ninguna pregunta es demasiado pequeña.",
+"ct-p": "Una conversación tranquila de 30 minutos sobre lo que le gustaría hacer con su tecnología. Sin presión, y ninguna pregunta es demasiado pequeña.",
 "topics": "O reserve su consulta gratis por tema",
 "c1": "Aparatos, Wi-Fi y hogar inteligente",
 "c1s": "Teléfonos, tabletas, computadoras e internet en casa",
@@ -1383,7 +1403,7 @@ var SV_I18N = {
 "a5": "Se puder, sim. Praticar no seu próprio aparelho ajuda a fixar o que aprendeu. Se não puder, ajudamos do mesmo jeito.",
 "ct-eyebrow": "Começar",
 "ct-h2": "Comece com uma consulta grátis",
-"ct-p": "Escolha um horário que funcione para você, por telefone ou Google Meet. Conte com o que você gostaria de ajuda, do seu jeito. Sem pressão, e nenhuma pergunta é pequena demais.",
+"ct-p": "Uma conversa tranquila de 30 minutos sobre o que você gostaria de fazer com a sua tecnologia. Sem pressão, e nenhuma pergunta é pequena demais.",
 "topics": "Ou agende sua consulta grátis por assunto",
 "c1": "Aparelhos, Wi-Fi e casa inteligente",
 "c1s": "Celulares, tablets, computadores e internet em casa",
