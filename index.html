@@ -385,6 +385,9 @@ html[data-size="xl"] .family-band{grid-template-columns:minmax(0,1fr)}
 @media (max-width:640px){.book-next{padding:22px}.book-intro .talk-btns .btn{flex:1;width:auto;margin-top:0}}
 /* Senior centers */
 #centers{border-top:1px solid var(--line)}
+#centers{padding-bottom:64px}
+#centers + #about{padding-top:64px;border-top:1px solid var(--line)}
+@media (max-width:640px){#centers{padding-bottom:48px}#centers + #about{padding-top:48px}}
 .why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-bottom:64px}
 .why div{border-top:4px solid var(--gold);padding-top:20px}
 .why h3{font-size:1.05rem;margin:0 0 .4em}
