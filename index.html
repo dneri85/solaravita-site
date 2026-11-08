@@ -383,6 +383,32 @@ html[data-size="xl"] .family-band{grid-template-columns:minmax(0,1fr)}
 .book .btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.6)}
 .book .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 @media (max-width:640px){.book-next{padding:22px}.book-intro .talk-btns .btn{flex:1;width:auto;margin-top:0}}
+/* Senior centers */
+#centers{border-top:1px solid var(--line)}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-bottom:44px}
+.why div{border-top:4px solid var(--gold);padding-top:18px}
+.why h3{font-size:1.05rem;margin:0 0 .35em}
+.why p{margin:0;color:var(--muted)}
+.centers-row{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:24px;align-items:start}
+.centers-row h3.sub{font-size:1rem;margin:0 0 .8em}
+.ctopics{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ctopic{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;gap:16px;align-items:flex-start}
+.ctopic .tile-icon{width:48px;height:48px;flex:none;margin:0}
+.ctopic .tile-icon .icon{width:24px;height:24px}
+.ctopic h4{margin:0 0 .2em;font-size:1rem;line-height:1.3}
+.ctopic p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.45}
+.centers-note{margin:1em 0 0;color:var(--muted)}
+.centers-box{background:var(--navy);color:var(--white);border-radius:22px;padding:30px}
+.centers-box h3{color:var(--white);font-size:1.1rem}
+.centers-box .checks li{color:var(--white);font-size:.95rem}
+.centers-box .btn{width:100%;margin-top:.8em}
+.centers-box .alt{margin:1em 0 0;font-size:.85rem;color:rgba(255,255,255,.9);text-align:center}
+.centers-box .alt a{color:var(--white);font-weight:700}
+.centers-box .alt a:hover{color:var(--leaf)}
+.centers-proof{margin:40px 0 0;padding-top:20px;border-top:1px solid var(--line);color:var(--muted)}
+@media (max-width:900px){.why{grid-template-columns:minmax(0,1fr);gap:20px}.centers-row{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.ctopics{grid-template-columns:minmax(0,1fr)}.centers-box{padding:24px}}
+html[data-size="xl"] .ctopics{grid-template-columns:minmax(0,1fr)}
 </style>
 <script type="application/ld+json">
 {
@@ -710,6 +736,48 @@ html[data-size="xl"] .family-band{grid-template-columns:minmax(0,1fr)}
   </div>
 </section>
 
+<!-- Senior centers -->
+<section class="section" id="centers">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span data-i18n="sc-eyebrow">For senior centers and community groups</span></span>
+      <h2><span data-i18n="sc-h2">The tech help your members keep asking for</span></h2>
+      <p class="lead"><span data-i18n="sc-lead">Your members want to video call their grandkids, read their test results, and stop worrying about scam calls. Solara Vita brings patient, hands-on tech workshops to your center, so they can learn it once and do it themselves.</span></p>
+    </div>
+    <div class="why">
+      <div><h3><span data-i18n="sc-w1-h">Ready-to-run programming</span></h3><p><span data-i18n="sc-w1-p">We choose the topic with you, provide a flyer to promote it, and lead the session. Your team books the room.</span></p></div>
+      <div><h3><span data-i18n="sc-w2-h">Less pressure on your staff</span></h3><p><span data-i18n="sc-w2-p">Members get patient, unhurried answers in a session made for them, so fewer tech questions land on your team.</span></p></div>
+      <div><h3><span data-i18n="sc-w3-h">Skills members keep</span></h3><p><span data-i18n="sc-w3-p">Members practice on their own phones and tablets, so they leave knowing how to do it, not just having watched someone else.</span></p></div>
+    </div>
+    <div class="centers-row">
+      <div>
+        <h3 class="sub"><span data-i18n="sc-topics">Workshop topics</span></h3>
+        <ul class="ctopics">
+        <li class="ctopic"><span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span><div><h4><span data-i18n="sc-t1-h">Spotting scams</span></h4><p><span data-i18n="sc-t1-p">Fake calls, texts, and emails, and what to do when something feels off.</span></p></div></li>
+        <li class="ctopic"><span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-portal"/></svg></span><div><h4><span data-i18n="sc-t2-h">Patient portals and telehealth</span></h4><p><span data-i18n="sc-t2-p">Test results, messages to the doctor, and joining a video visit.</span></p></div></li>
+        <li class="ctopic"><span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span><div><h4><span data-i18n="sc-t3-h">Staying close to family</span></h4><p><span data-i18n="sc-t3-p">Video calls, sharing photos, and group texts with the people they love.</span></p></div></li>
+        <li class="ctopic"><span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-device"/></svg></span><div><h4><span data-i18n="sc-t4-h">Making devices easier to use</span></h4><p><span data-i18n="sc-t4-p">Bigger text, louder sound, and settings that fit how they actually use their phone.</span></p></div></li>
+        </ul>
+        <p class="centers-note"><span data-i18n="sc-note">Have a different topic in mind? We can build a session around what your members ask about most.</span></p>
+      </div>
+      <div class="centers-box on-navy">
+        <h3><span data-i18n="sc-box-h">What your center gets</span></h3>
+        <ul class="checks">
+          <li><span data-i18n="sc-g1">A one-time workshop or a monthly series</span></li>
+          <li><span data-i18n="sc-g2">A planning call to choose the right topic</span></li>
+          <li><span data-i18n="sc-g3">A ready-to-share flyer for your members</span></li>
+          <li><span data-i18n="sc-g4">Time at the end for one-on-one questions</span></li>
+          <li><span data-i18n="sc-g5">Sessions in English or Portuguese</span></li>
+          <li><span data-i18n="sc-g6">Private follow-up help for members who want more</span></li>
+        </ul>
+        <a class="btn btn-gold" href="https://calendly.com/solaravita/workshop-planning" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="sc-btn">Plan a workshop with us</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
+        <p class="alt"><span data-i18n="sc-alt">Or call or text</span> <a class="nw" href="tel:+19546870675">(954) 687-0675</a>, <span data-i18n="sc-or-email">or email</span> <a href="mailto:daniza@solaravita.company?subject=Workshop%20request">daniza@solaravita.company</a></p>
+      </div>
+    </div>
+    <p class="centers-proof"><span data-i18n="sc-proof">Already partnering with Margate Catharine Young Library on a free senior tech program.</span></p>
+  </div>
+</section>
+
 <!-- About -->
 <section class="section" id="about">
   <div class="wrap about">
@@ -797,6 +865,7 @@ html[data-size="xl"] .family-band{grid-template-columns:minmax(0,1fr)}
         <a href="#help"><span data-i18n="nav-help">How we help</span></a>
         <a href="#services"><span data-i18n="svc-eyebrow"><span data-i18n="nav-services">What we help with</span></span></a>
         <a href="#events"><span data-i18n="nav-events">Events</span></a>
+        <a href="#centers"><span data-i18n="nav-centers">For senior centers</span></a>
         <a href="#about"><span data-i18n="nav-about">About</span></a>
         <a href="/pricing/"><span data-i18n="nav-pricing">Pricing</span></a>
         <a href="#faq"><span data-i18n="nav-faq">Questions</span></a>
@@ -980,7 +1049,38 @@ var SV_I18N = {
 "nx2-h": "We talk, up to 30 minutes",
 "nx2-p": "By phone or Google Meet. Family members are welcome to join.",
 "nx3-h": "Your personal plan",
-"nx3-p": "Within 48 to 72 hours, we send your goals, suggested sessions, and price. You decide if and when to start."
+"nx3-p": "Within 48 to 72 hours, we send your goals, suggested sessions, and price. You decide if and when to start.",
+"sc-eyebrow": "For senior centers and community groups",
+"sc-h2": "The tech help your members keep asking for",
+"sc-lead": "Your members want to video call their grandkids, read their test results, and stop worrying about scam calls. Solara Vita brings patient, hands-on tech workshops to your center, so they can learn it once and do it themselves.",
+"sc-w1-h": "Ready-to-run programming",
+"sc-w1-p": "We choose the topic with you, provide a flyer to promote it, and lead the session. Your team books the room.",
+"sc-w2-h": "Less pressure on your staff",
+"sc-w2-p": "Members get patient, unhurried answers in a session made for them, so fewer tech questions land on your team.",
+"sc-w3-h": "Skills members keep",
+"sc-w3-p": "Members practice on their own phones and tablets, so they leave knowing how to do it, not just having watched someone else.",
+"sc-topics": "Workshop topics",
+"sc-t1-h": "Spotting scams",
+"sc-t1-p": "Fake calls, texts, and emails, and what to do when something feels off.",
+"sc-t2-h": "Patient portals and telehealth",
+"sc-t2-p": "Test results, messages to the doctor, and joining a video visit.",
+"sc-t3-h": "Staying close to family",
+"sc-t3-p": "Video calls, sharing photos, and group texts with the people they love.",
+"sc-t4-h": "Making devices easier to use",
+"sc-t4-p": "Bigger text, louder sound, and settings that fit how they actually use their phone.",
+"sc-note": "Have a different topic in mind? We can build a session around what your members ask about most.",
+"sc-box-h": "What your center gets",
+"sc-g1": "A one-time workshop or a monthly series",
+"sc-g2": "A planning call to choose the right topic",
+"sc-g3": "A ready-to-share flyer for your members",
+"sc-g4": "Time at the end for one-on-one questions",
+"sc-g5": "Sessions in English or Portuguese",
+"sc-g6": "Private follow-up help for members who want more",
+"sc-btn": "Plan a workshop with us",
+"sc-alt": "Or call or text",
+"sc-or-email": "or email",
+"sc-proof": "Already partnering with Margate Catharine Young Library on a free senior tech program.",
+"nav-centers": "For senior centers"
 },
 "es": {
 "lang-label": "Idioma",
@@ -1141,7 +1241,38 @@ var SV_I18N = {
 "nx2-h": "Conversamos, hasta 30 minutos",
 "nx2-p": "Por teléfono o Google Meet. Sus familiares son bienvenidos.",
 "nx3-h": "Su plan personal",
-"nx3-p": "En 48 a 72 horas, le enviamos sus metas, las sesiones sugeridas y el precio. Usted decide si quiere empezar y cuándo."
+"nx3-p": "En 48 a 72 horas, le enviamos sus metas, las sesiones sugeridas y el precio. Usted decide si quiere empezar y cuándo.",
+"sc-eyebrow": "Para centros para adultos mayores y grupos comunitarios",
+"sc-h2": "La ayuda con la tecnología que sus miembros siempre piden",
+"sc-lead": "Sus miembros quieren hacer videollamadas con sus nietos, leer sus resultados médicos y dejar de preocuparse por las llamadas fraudulentas. Solara Vita lleva talleres prácticos y pacientes a su centro, para que aprendan una vez y lo hagan por su cuenta.",
+"sc-w1-h": "Programas listos para usar",
+"sc-w1-p": "Elegimos el tema con ustedes, les damos un volante para promoverlo y dirigimos la sesión. Su equipo solo reserva el salón.",
+"sc-w2-h": "Menos presión para su personal",
+"sc-w2-p": "Sus miembros reciben respuestas pacientes y sin prisa en una sesión pensada para ellos, así su equipo recibe menos preguntas de tecnología.",
+"sc-w3-h": "Habilidades que se quedan",
+"sc-w3-p": "Sus miembros practican con sus propios teléfonos y tabletas, así se van sabiendo hacerlo, no solo habiendo visto a otra persona.",
+"sc-topics": "Temas de los talleres",
+"sc-t1-h": "Cómo reconocer estafas",
+"sc-t1-p": "Llamadas, mensajes y correos falsos, y qué hacer cuando algo no parece correcto.",
+"sc-t2-h": "Portales de pacientes y telesalud",
+"sc-t2-p": "Resultados, mensajes al médico y cómo entrar a una consulta por video.",
+"sc-t3-h": "Cerca de la familia",
+"sc-t3-p": "Videollamadas, compartir fotos y mensajes en grupo con sus seres queridos.",
+"sc-t4-h": "Aparatos más fáciles de usar",
+"sc-t4-p": "Letra más grande, sonido más alto y ajustes según cómo usan su teléfono.",
+"sc-note": "¿Tiene otro tema en mente? Podemos preparar una sesión sobre lo que sus miembros más preguntan.",
+"sc-box-h": "Lo que recibe su centro",
+"sc-g1": "Un taller único o una serie mensual",
+"sc-g2": "Una llamada para elegir el tema adecuado",
+"sc-g3": "Un volante listo para compartir con sus miembros",
+"sc-g4": "Tiempo al final para preguntas individuales",
+"sc-g5": "Sesiones en inglés o portugués",
+"sc-g6": "Ayuda individual posterior para quien quiera más",
+"sc-btn": "Planifique un taller con nosotros",
+"sc-alt": "O llame o escriba al",
+"sc-or-email": "o escriba a",
+"sc-proof": "Ya colaboramos con la biblioteca Margate Catharine Young en un programa gratuito de tecnología para adultos mayores.",
+"nav-centers": "Para centros de adultos mayores"
 },
 "pt": {
 "lang-label": "Idioma",
@@ -1302,7 +1433,38 @@ var SV_I18N = {
 "nx2-h": "Conversamos, até 30 minutos",
 "nx2-p": "Por telefone ou Google Meet. Familiares são bem-vindos.",
 "nx3-h": "Seu plano personalizado",
-"nx3-p": "Em 48 a 72 horas, enviamos seus objetivos, as sessões sugeridas e o preço. Você decide se e quando quer começar."
+"nx3-p": "Em 48 a 72 horas, enviamos seus objetivos, as sessões sugeridas e o preço. Você decide se e quando quer começar.",
+"sc-eyebrow": "Para centros de convivência e grupos comunitários",
+"sc-h2": "A ajuda com tecnologia que seus participantes vivem pedindo",
+"sc-lead": "Seus participantes querem fazer videochamadas com os netos, ver resultados de exames e parar de se preocupar com ligações de golpe. A Solara Vita leva oficinas práticas e pacientes até o seu centro, para que aprendam uma vez e façam sozinhos.",
+"sc-w1-h": "Programação pronta",
+"sc-w1-p": "Escolhemos o tema com vocês, oferecemos um panfleto para divulgar e conduzimos a sessão. Sua equipe só reserva a sala.",
+"sc-w2-h": "Menos pressão sobre sua equipe",
+"sc-w2-p": "Os participantes recebem respostas pacientes, sem pressa, numa sessão feita para eles, e menos dúvidas de tecnologia chegam à sua equipe.",
+"sc-w3-h": "Aprendizado que fica",
+"sc-w3-p": "Os participantes praticam no próprio celular e tablet, e saem sabendo fazer, não só tendo visto alguém fazer.",
+"sc-topics": "Temas das oficinas",
+"sc-t1-h": "Como reconhecer golpes",
+"sc-t1-p": "Ligações, mensagens e e-mails falsos, e o que fazer quando algo parece estranho.",
+"sc-t2-h": "Portais de pacientes e telessaúde",
+"sc-t2-p": "Resultados de exames, mensagens para o médico e como entrar numa consulta por vídeo.",
+"sc-t3-h": "Perto da família",
+"sc-t3-p": "Videochamadas, envio de fotos e conversas em grupo com quem eles amam.",
+"sc-t4-h": "Aparelhos mais fáceis de usar",
+"sc-t4-p": "Letra maior, som mais alto e ajustes do jeito que eles realmente usam o celular.",
+"sc-note": "Tem outro tema em mente? Podemos montar uma sessão sobre o que seus participantes mais perguntam.",
+"sc-box-h": "O que seu centro recebe",
+"sc-g1": "Uma oficina única ou uma série mensal",
+"sc-g2": "Uma conversa para escolher o tema certo",
+"sc-g3": "Um panfleto pronto para divulgar",
+"sc-g4": "Tempo no final para dúvidas individuais",
+"sc-g5": "Sessões em inglês ou português",
+"sc-g6": "Ajuda individual depois, para quem quiser mais",
+"sc-btn": "Planeje uma oficina conosco",
+"sc-alt": "Ou ligue ou mande mensagem para",
+"sc-or-email": "ou escreva para",
+"sc-proof": "Já somos parceiros da biblioteca Margate Catharine Young num programa gratuito de tecnologia para idosos.",
+"nav-centers": "Para centros de convivência"
 }
 };
 var SV_LANG = 'en';
