@@ -385,30 +385,34 @@ html[data-size="xl"] .family-band{grid-template-columns:minmax(0,1fr)}
 @media (max-width:640px){.book-next{padding:22px}.book-intro .talk-btns .btn{flex:1;width:auto;margin-top:0}}
 /* Senior centers */
 #centers{border-top:1px solid var(--line)}
-.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-bottom:44px}
-.why div{border-top:4px solid var(--gold);padding-top:18px}
-.why h3{font-size:1.05rem;margin:0 0 .35em}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-bottom:64px}
+.why div{border-top:4px solid var(--gold);padding-top:20px}
+.why h3{font-size:1.05rem;margin:0 0 .4em}
 .why p{margin:0;color:var(--muted)}
-.centers-row{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:24px;align-items:start}
-.centers-row h3.sub{font-size:1rem;margin:0 0 .8em}
-.ctopics{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.ctopic{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;gap:16px;align-items:flex-start}
-.ctopic .tile-icon{width:48px;height:48px;flex:none;margin:0}
-.ctopic .tile-icon .icon{width:24px;height:24px}
-.ctopic h4{margin:0 0 .2em;font-size:1rem;line-height:1.3}
-.ctopic p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.45}
-.centers-note{margin:1em 0 0;color:var(--muted)}
-.centers-box{background:var(--navy);color:var(--white);border-radius:22px;padding:30px}
-.centers-box h3{color:var(--white);font-size:1.1rem}
-.centers-box .checks li{color:var(--white);font-size:.95rem}
-.centers-box .btn{width:100%;margin-top:.8em}
-.centers-box .alt{margin:1em 0 0;font-size:.85rem;color:rgba(255,255,255,.9);text-align:center}
+.centers-row{display:flex;flex-direction:column;gap:48px}
+.centers-row h3.sub{font-size:1.1rem;margin:0 0 1em}
+.ctopics{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.ctopic{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;display:flex;flex-direction:column;gap:14px}
+.ctopic .tile-icon{width:52px;height:52px;flex:none;margin:0}
+.ctopic .tile-icon .icon{width:26px;height:26px}
+.ctopic h4{margin:0 0 .3em;font-size:1rem;line-height:1.3}
+.ctopic p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.5}
+.centers-note{margin:1.2em 0 0;color:var(--muted)}
+.centers-box{background:var(--navy);color:var(--white);border-radius:24px;padding:44px 48px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:48px;align-items:center}
+.centers-box h3{color:var(--white);font-size:1.25rem;margin-bottom:.8em}
+.centers-box .checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 32px}
+.centers-box .checks li{color:var(--white);font-size:.95rem;margin:.35em 0}
+.centers-cta .btn{width:100%}
+.centers-box .alt{margin:1.1em 0 0;font-size:.85rem;color:rgba(255,255,255,.9);text-align:center;line-height:1.7}
 .centers-box .alt a{color:var(--white);font-weight:700}
 .centers-box .alt a:hover{color:var(--leaf)}
-.centers-proof{margin:40px 0 0;padding-top:20px;border-top:1px solid var(--line);color:var(--muted)}
-@media (max-width:900px){.why{grid-template-columns:minmax(0,1fr);gap:20px}.centers-row{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:640px){.ctopics{grid-template-columns:minmax(0,1fr)}.centers-box{padding:24px}}
-html[data-size="xl"] .ctopics{grid-template-columns:minmax(0,1fr)}
+.centers-proof{margin:48px 0 0;padding-top:24px;border-top:1px solid var(--line);color:var(--muted)}
+@media (max-width:1100px){.ctopics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+html[data-size="lg"] .ctopics,html[data-size="xl"] .ctopics{grid-template-columns:repeat(2,minmax(0,1fr))}
+html[data-size="lg"] .centers-box,html[data-size="xl"] .centers-box{grid-template-columns:minmax(0,1fr)}
+@media (max-width:900px){.why{grid-template-columns:minmax(0,1fr);gap:24px;margin-bottom:48px}.centers-box{grid-template-columns:minmax(0,1fr);gap:28px;padding:36px}}
+@media (max-width:640px){.ctopics,html[data-size="lg"] .ctopics,html[data-size="xl"] .ctopics{grid-template-columns:minmax(0,1fr)}.centers-box{padding:26px 22px}.centers-box .checks{grid-template-columns:minmax(0,1fr)}.ctopic{flex-direction:row;gap:16px}}
+html[data-size="xl"] .centers-box .checks{grid-template-columns:minmax(0,1fr)}
 </style>
 <script type="application/ld+json">
 {
@@ -761,6 +765,7 @@ html[data-size="xl"] .ctopics{grid-template-columns:minmax(0,1fr)}
         <p class="centers-note"><span data-i18n="sc-note">Have a different topic in mind? We can build a session around what your members ask about most.</span></p>
       </div>
       <div class="centers-box on-navy">
+        <div>
         <h3><span data-i18n="sc-box-h">What your center gets</span></h3>
         <ul class="checks">
           <li><span data-i18n="sc-g1">A one-time workshop or a monthly series</span></li>
@@ -770,8 +775,11 @@ html[data-size="xl"] .ctopics{grid-template-columns:minmax(0,1fr)}
           <li><span data-i18n="sc-g5">Sessions in English or Portuguese</span></li>
           <li><span data-i18n="sc-g6">Private follow-up help for members who want more</span></li>
         </ul>
+        </div>
+        <div class="centers-cta">
         <a class="btn btn-gold" href="https://calendly.com/solaravita/workshop-planning" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="sc-btn">Plan a workshop with us</span><span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
         <p class="alt"><span data-i18n="sc-alt">Or call or text</span> <a class="nw" href="tel:+19546870675">(954) 687-0675</a>, <span data-i18n="sc-or-email">or email</span> <a href="mailto:daniza@solaravita.company?subject=Workshop%20request">daniza@solaravita.company</a></p>
+        </div>
       </div>
     </div>
     <p class="centers-proof"><span data-i18n="sc-proof">Already partnering with Margate Catharine Young Library on a free senior tech program.</span></p>
