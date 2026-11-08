@@ -1576,31 +1576,31 @@ document.querySelectorAll('.lang-btn').forEach(function (b) {
 })();
 </script>
 <script>
-/* Gentle scrolling for links within the page: slower, eased motion that is easier on the eyes.
-   Respects the "reduce motion" setting, and stops if the visitor scrolls or presses a key. */
+/* Calm in-page jumps: instead of sliding past every section (which can feel dizzying),
+   the page content softly fades out, moves to the section, and fades back in.
+   The header stays put so visitors keep their bearings. "Reduce motion" users jump instantly. */
 (function(){
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var raf=null;
-  function stop(){if(raf){cancelAnimationFrame(raf);raf=null;}}
-  ['wheel','touchstart','keydown','mousedown'].forEach(function(e){window.addEventListener(e,stop,{passive:true});});
-  function ease(t){return -(Math.cos(Math.PI*t)-1)/2;}
-  function go(el){
+  var busy=false;
+  function parts(){return [document.getElementById('main'),document.querySelector('footer')].filter(Boolean);}
+  function land(el){
+    if(!el.hasAttribute('tabindex')&&!/^(A|BUTTON|INPUT|SELECT|TEXTAREA)$/.test(el.tagName))el.setAttribute('tabindex','-1');
+    try{el.focus({preventScroll:true});}catch(e){}
+  }
+  function jump(el){
     var pad=parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop)||0;
-    var start=window.pageYOffset,end=Math.max(0,el.getBoundingClientRect().top+start-pad),dist=end-start;
-    function done(){
-      if(!el.hasAttribute('tabindex')&&!/^(A|BUTTON|INPUT|SELECT|TEXTAREA)$/.test(el.tagName))el.setAttribute('tabindex','-1');
-      try{el.focus({preventScroll:true});}catch(e){}
-    }
-    if(reduce||Math.abs(dist)<4){window.scrollTo(0,end);done();return;}
-    var dur=Math.min(1800,Math.max(800,700+Math.abs(dist)*0.22)),t0=null;
-    stop();
-    function step(ts){
-      if(t0===null)t0=ts;
-      var p=Math.min(1,(ts-t0)/dur);
-      window.scrollTo(0,start+dist*ease(p));
-      if(p<1){raf=requestAnimationFrame(step);}else{raf=null;done();}
-    }
-    raf=requestAnimationFrame(step);
+    window.scrollTo(0,Math.max(0,el.getBoundingClientRect().top+window.pageYOffset-pad));
+  }
+  function go(el){
+    if(reduce){jump(el);land(el);return;}
+    if(busy)return; busy=true;
+    var ps=parts();
+    ps.forEach(function(p){p.style.transition='opacity .35s ease';p.style.opacity='0';});
+    setTimeout(function(){
+      jump(el);
+      ps.forEach(function(p){p.style.transition='opacity .6s ease';p.style.opacity='1';});
+      setTimeout(function(){ps.forEach(function(p){p.style.transition='';p.style.opacity='';});busy=false;land(el);},650);
+    },380);
   }
   document.addEventListener('click',function(e){
     if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
