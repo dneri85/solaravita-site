@@ -47,7 +47,7 @@
   --wrap:1080px;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%;font-size:20px;scroll-behavior:smooth;scroll-padding-top:110px}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;font-size:20px;scroll-padding-top:110px}
 html[data-size="lg"]{font-size:23px}
 html[data-size="xl"]{font-size:26px}
 body{margin:0;background:var(--warm);color:var(--navy);font-family:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -1343,6 +1343,47 @@ document.querySelectorAll('.lang-btn').forEach(function (b) {
   window.addEventListener('load',fit);
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
   fit();
+})();
+</script>
+<script>
+/* Gentle scrolling for links within the page: slower, eased motion that is easier on the eyes.
+   Respects the "reduce motion" setting, and stops if the visitor scrolls or presses a key. */
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var raf=null;
+  function stop(){if(raf){cancelAnimationFrame(raf);raf=null;}}
+  ['wheel','touchstart','keydown','mousedown'].forEach(function(e){window.addEventListener(e,stop,{passive:true});});
+  function ease(t){return -(Math.cos(Math.PI*t)-1)/2;}
+  function go(el){
+    var pad=parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop)||0;
+    var start=window.pageYOffset,end=Math.max(0,el.getBoundingClientRect().top+start-pad),dist=end-start;
+    function done(){
+      if(!el.hasAttribute('tabindex')&&!/^(A|BUTTON|INPUT|SELECT|TEXTAREA)$/.test(el.tagName))el.setAttribute('tabindex','-1');
+      try{el.focus({preventScroll:true});}catch(e){}
+    }
+    if(reduce||Math.abs(dist)<4){window.scrollTo(0,end);done();return;}
+    var dur=Math.min(1800,Math.max(800,700+Math.abs(dist)*0.22)),t0=null;
+    stop();
+    function step(ts){
+      if(t0===null)t0=ts;
+      var p=Math.min(1,(ts-t0)/dur);
+      window.scrollTo(0,start+dist*ease(p));
+      if(p<1){raf=requestAnimationFrame(step);}else{raf=null;done();}
+    }
+    raf=requestAnimationFrame(step);
+  }
+  document.addEventListener('click',function(e){
+    if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href^="#"]');
+    if(!a)return;
+    var id=a.getAttribute('href').slice(1);
+    if(!id||id==='main')return;
+    var el=document.getElementById(id);
+    if(!el)return;
+    e.preventDefault();
+    if(history.pushState)history.pushState(null,'','#'+id);
+    go(el);
+  });
 })();
 </script>
 </body>
